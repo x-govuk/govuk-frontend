@@ -59,6 +59,11 @@
     }
   }
 
+  .govuk-input--extra-letter-spacing {
+    @include govuk-font(false, $tabular: true);
+    letter-spacing: .05em;
+  }
+
   // The ex measurements are based on the number of W's that can fit inside the input
   // Extra space is left on the right hand side to allow for the Safari prefill icon
   // Linear regression estimation based on visual tests: y = 1.76 + 1.81x
