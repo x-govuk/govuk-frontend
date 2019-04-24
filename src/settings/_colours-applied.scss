@@ -146,3 +146,11 @@ $govuk-link-hover-colour: govuk-colour("dark-blue", $legacy: "light-blue") !defa
 /// @access public
 
 $govuk-link-active-colour: govuk-colour("black", $legacy: "light-blue") !default;
+
+/// Link underline colour
+///
+/// Has no effect if it's the same as the link colour
+/// @type Colour
+/// @access public
+
+$govuk-link-underline-colour: govuk-colour("light-blue", $legacy: "blue") !default;

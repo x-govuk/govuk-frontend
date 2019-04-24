@@ -5,6 +5,7 @@ const nunjucks = require('nunjucks')
 const util = require('util')
 const fs = require('fs')
 const path = require('path')
+const uuid = require("uuid")
 
 const readdir = util.promisify(fs.readdir)
 
@@ -38,6 +39,7 @@ module.exports = (options) => {
 
   // make the function available as a filter for all templates
   env.addFilter('componentNameToMacroName', helperFunctions.componentNameToMacroName)
+  env.addGlobal('random', uuid.v4)
 
   // Set view engine
   app.set('view engine', 'njk')
