@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### Breaking changes
+You must make the following changes when you migrate to this release, or your service may break.
+
+#### Remove deprecated $govuk-border-width-form-element-error
+In 3.9.0, we changed `$govuk-border-width-form-element-error` to match `$govuk-border-width-form-element` and marked it as deprecated. To migrate, change `$govuk-border-width-form-element-error` to `$govuk-border-width-form-element` in your codebase.
+
 ## 3.9.1 (Fix release)
 
 ### Fixes
