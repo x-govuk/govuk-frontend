@@ -77,13 +77,12 @@
       margin: 0;
       padding: 0;
       border-width: 0;
-      color: $govuk-link-colour;
       background: none;
       cursor: pointer;
       -webkit-appearance: none;
 
       @include govuk-link-common;
-      @include govuk-link-style-default;
+      @include govuk-link-style-text;
 
       // Remove default button focus outline in Firefox
       &::-moz-focus-inner {
@@ -98,7 +97,7 @@
       // Safe area on the right to avoid clashing with icon
       padding-right: 40px;
       border-top: 1px solid $govuk-border-colour;
-      color: $govuk-accordion-link-colour;
+      text-decoration: underline;
       cursor: pointer;
     }
 
@@ -122,6 +121,7 @@
       color: inherit;
       background: none;
       text-align: left;
+      text-decoration: underline;
       cursor: pointer;
       -webkit-appearance: none;
 
@@ -144,18 +144,6 @@
       right: 0;
       bottom: 0;
       left: 0;
-    }
-
-    .govuk-accordion__section-button:hover:not(:focus) {
-      text-decoration: underline;
-    }
-
-    // For devices that can't hover such as touch devices,
-    // remove hover state as it can be stuck in that state (iOS).
-    @media (hover: none) {
-      .govuk-accordion__section-button:hover {
-        text-decoration: none;
-      }
     }
 
     .govuk-accordion__controls {
