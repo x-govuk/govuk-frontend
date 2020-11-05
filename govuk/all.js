@@ -803,17 +803,17 @@ Accordion.prototype.init = function () {
 
   this.initSectionHeaders();
 
-  // See if "Open all" button text should be updated
+  // See if "Show all" button text should be updated
   var areAllSectionsOpen = this.checkIfAllSectionsOpen();
   this.updateOpenAllButton(areAllSectionsOpen);
 };
 
 // Initialise controls and set attributes
 Accordion.prototype.initControls = function () {
-  // Create "Open all" button and set attributes
+  // Create "Show all" button and set attributes
   this.$openAllButton = document.createElement('button');
   this.$openAllButton.setAttribute('type', 'button');
-  this.$openAllButton.innerHTML = 'Open all <span class="govuk-visually-hidden">sections</span>';
+  this.$openAllButton.innerHTML = '<span class="govuk-accordion__open-all--text">Show all</span> <span class="govuk-visually-hidden">sections</span>';
   this.$openAllButton.setAttribute('class', this.openAllClass);
   this.$openAllButton.setAttribute('aria-expanded', 'false');
   this.$openAllButton.setAttribute('type', 'button');
@@ -891,6 +891,25 @@ Accordion.prototype.initHeaderAttributes = function ($headerWrapper, index) {
   icon.className = this.iconClass;
   icon.setAttribute('aria-hidden', 'true');
 
+  // Add 'show / hide' text
+  var span = document.createElement('span');
+  var showHideSpan = document.createElement('span');
+  var commaSpan = document.createElement('span');
+  var thisSectionSpan = document.createElement('span');
+
+  span.className = 'govuk-accordion__toggle';
+  showHideSpan.className = 'govuk-accordion__toggle-link js-toggle-link';
+  commaSpan.className = 'govuk-visually-hidden';
+  thisSectionSpan.className = 'govuk-visually-hidden';
+
+  commaSpan.innerHTML = ', ';
+  thisSectionSpan.innerHTML = ' this section';
+
+  span.appendChild(commaSpan);
+  span.appendChild(showHideSpan);
+  span.appendChild(thisSectionSpan);
+
+  $button.appendChild(span);
   $button.appendChild(icon);
 };
 
@@ -924,13 +943,17 @@ Accordion.prototype.setExpanded = function (expanded, $section) {
   var $button = $section.querySelector('.' + this.sectionButtonClass);
   $button.setAttribute('aria-expanded', expanded);
 
+  var $showHideLink = $section.querySelector('.govuk-accordion__toggle-link');
+
   if (expanded) {
     $section.classList.add(this.sectionExpandedClass);
+    $showHideLink.innerText = 'hide';
   } else {
     $section.classList.remove(this.sectionExpandedClass);
+    $showHideLink.innerText = 'show';
   }
 
-  // See if "Open all" button text should be updated
+  // See if "Show all" button text should be updated
   var areAllSectionsOpen = this.checkIfAllSectionsOpen();
   this.updateOpenAllButton(areAllSectionsOpen);
 };
@@ -951,9 +974,9 @@ Accordion.prototype.checkIfAllSectionsOpen = function () {
   return areAllSectionsOpen
 };
 
-// Update "Open all" button
+// Update "Show all" button
 Accordion.prototype.updateOpenAllButton = function (expanded) {
-  var newButtonText = expanded ? 'Close all' : 'Open all';
+  var newButtonText = expanded ? '<span class="govuk-accordion__open-all--hide">Hide all</span>' : '<span class="govuk-accordion__open-all--show">Show all</span>';
   newButtonText += '<span class="govuk-visually-hidden"> sections</span>';
   this.$openAllButton.setAttribute('aria-expanded', expanded);
   this.$openAllButton.innerHTML = newButtonText;
@@ -1959,6 +1982,52 @@ ErrorSummary.prototype.getAssociatedLegendOrLabel = function ($input) {
     $input.closest('label')
 };
 
+function NotificationBanner ($module) {
+  this.$module = $module;
+}
+
+/**
+ * Initialise the component
+ */
+NotificationBanner.prototype.init = function () {
+  var $module = this.$module;
+  // Check for module
+  if (!$module) {
+    return
+  }
+
+  this.setFocus();
+};
+
+/**
+ * Focus the element
+ *
+ * If `role="alert"` is set, focus the element to help some assistive technologies
+ * prioritise announcing it.
+ *
+ * You can turn off the auto-focus functionality by setting `data-disable-auto-focus="true"` in the
+ * component HTML. You might wish to do this based on user research findings, or to avoid a clash
+ * with another element which should be focused when the page loads.
+ */
+NotificationBanner.prototype.setFocus = function () {
+  var $module = this.$module;
+
+  if ($module.getAttribute('data-disable-auto-focus') === 'true') {
+    return
+  }
+
+  if ($module.getAttribute('role') !== 'alert') {
+    return
+  }
+
+  // Set tabindex to -1 to make the element focusable with JavaScript.
+  if (!$module.getAttribute('tabindex')) {
+    $module.setAttribute('tabindex', '-1');
+  }
+
+  $module.focus();
+};
+
 function Header ($module) {
   this.$module = $module;
   this.$menuButton = $module && $module.querySelector('.govuk-js-header-toggle');
@@ -2475,6 +2544,11 @@ function initAll (options) {
   // Find first header module to enhance.
   var $toggleButton = scope.querySelector('[data-module="govuk-header"]');
   new Header($toggleButton).init();
+
+  var $notificationBanners = scope.querySelectorAll('[data-module="govuk-notification-banner"]');
+  nodeListForEach($notificationBanners, function ($notificationBanner) {
+    new NotificationBanner($notificationBanner).init();
+  });
 
   var $radios = scope.querySelectorAll('[data-module="govuk-radios"]');
   nodeListForEach($radios, function ($radio) {
