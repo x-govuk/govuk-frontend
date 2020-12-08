@@ -56,6 +56,8 @@
     &:hover {
       color: $govuk-button-text-colour;
       text-decoration: none;
+      background-color: #00703c;
+      box-shadow: 0 2px 0 #002d18;
     }
 
     // Fix unwanted button padding in Firefox

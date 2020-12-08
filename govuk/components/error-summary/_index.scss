@@ -39,5 +39,14 @@
     @include govuk-typography-weight-bold;
     @include govuk-link-common;
     @include govuk-link-style-error;
+
+    &:focus {
+      @include govuk-focused-text;
+    }
+
+    &:hover {
+      @include govuk-hovered-text;
+      box-shadow: 0 -2px transparent, 0 3px $govuk-error-colour;
+    }
   }
 }

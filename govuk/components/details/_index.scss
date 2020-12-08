@@ -23,8 +23,8 @@
     color: $govuk-link-colour;
     cursor: pointer;
 
-    &:hover {
-      color: $govuk-link-hover-colour;
+    &:hover:not(:focus) {
+      @include govuk-hovered-text;
     }
 
     &:focus {
@@ -35,6 +35,11 @@
   // ...but only underline the text, not the arrow
   .govuk-details__summary-text {
     text-decoration: underline;
+  }
+
+  // Remove the underline when hovered to avoid duplicate borders
+  .govuk-details__summary:hover .govuk-details__summary-text {
+    text-decoration: none;
   }
 
   // Remove the underline when focussed to avoid duplicate borders
