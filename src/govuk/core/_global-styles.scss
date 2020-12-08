@@ -8,10 +8,6 @@
 @import "typography";
 
 @mixin govuk-global-styles {
-  a {
-    @extend %govuk-link;
-  }
-
   p {
     @extend %govuk-body-m;
   }
