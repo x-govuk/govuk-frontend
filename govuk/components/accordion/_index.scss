@@ -194,4 +194,52 @@
       display: none;
     }
   }
+
+  // Create Chervon icon align with text
+  .govuk-accordion__icon {
+    vertical-align: text-top;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    width: em(20, 14);
+    height: em(20, 14);
+    margin-left: em(5, 14);
+    border: em(1, 14) solid;
+    border-radius: em(100, 14);
+    // Main icon size across views, yet keep responsive for zoom
+    @include govuk-media-query($from: tablet) {
+      width: em(20, 16);
+      height: em(20, 16);
+      margin-left: em(5, 16);
+      border: em(1, 16) solid;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      overflow: visible;
+      width: em(6, 14);
+      height: em(6, 14);
+      border-top: em(2, 14) solid;
+      border-right: em(2, 14) solid;
+      transform: rotate(-45deg);
+      left: em(6, 14);
+      bottom: em(5, 14);
+      @include govuk-media-query($from: tablet) {
+        width: em(6, 16);
+        height: em(6, 16);
+        border-top: em(2, 16) solid;
+        border-right: em(2, 16) solid;
+        left: em(6, 16);
+        bottom: em(5, 16);
+      }
+    }
+  }
+
+  // Rotate icon to create "Down" version
+  .govuk-accordion__icon--down {
+    transform: rotate(180deg);
+  }
 }
