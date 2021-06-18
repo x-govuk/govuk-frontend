@@ -74,10 +74,10 @@ Accordion.prototype.initControls = function () {
   accordionControls.appendChild(this.$openAllButton)
   this.$module.insertBefore(accordionControls, this.$module.firstChild)
 
-  // Build additional wrapper for open all toggle text, place icon after wrapped text.
+  // Build additional wrapper for open all toggle text, place icon before wrapped text.
   var wrapperOpenAllText = document.createElement('span')
   wrapperOpenAllText.classList.add(this.openAllTextClass)
-  this.$openAllButton.insertBefore(wrapperOpenAllText, this.$openAllButton.childNodes[0] || null)
+  this.$openAllButton.appendChild(wrapperOpenAllText)
 
   // Handle events for the controls
   this.$openAllButton.addEventListener('click', this.onOpenOrCloseAllToggle.bind(this))
@@ -127,13 +127,13 @@ Accordion.prototype.initHeaderAttributes = function ($headerWrapper, index) {
   srAdditionalCopy.classList.add('govuk-visually-hidden')
   srAdditionalCopy.innerHTML = ' this section'
 
-  // Build additional wrapper for toggle text, place icon after wrapped text.
+  // Build additional wrapper for toggle text, place icon before wrapped text.
   var wrapperShowHideIcon = document.createElement('span')
   var icon = document.createElement('span')
   icon.classList.add(this.upChevronIconClass)
   showIcons.appendChild(icon)
   wrapperShowHideIcon.classList.add(this.sectionShowHideTextClass)
-  showIcons.insertBefore(wrapperShowHideIcon, showIcons.childNodes[0] || null)
+  showIcons.appendChild(wrapperShowHideIcon)
 
   // Copy all attributes (https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) from $span to $button
   for (var i = 0; i < $span.attributes.length; i++) {
