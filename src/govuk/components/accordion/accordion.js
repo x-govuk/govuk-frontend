@@ -3,7 +3,7 @@
   Accordion
 
   This allows a collection of sections to be collapsed by default,
-  showing only their headers. Sections can be exanded or collapsed
+  showing only their headers. Sections can be expanded or collapsed
   individually by clicking their headers. An "Open all" button is
   also added to the top of the accordion, which switches to "Close all"
   when all the sections are expanded.
@@ -37,8 +37,8 @@ function Accordion ($module) {
   this.toggleLinkClass = 'js-toggle-link'
   this.sectionShowHideIconClass = 'govuk-accordion__toggle-link'
   this.sectionShowHideTextClass = 'govuk-accordion__toggle-text'
-  this.upChevonIconClass = 'govuk-accordion-nav__chevron'
-  this.downChevonIconClass = 'govuk-accordion-nav__chevron--down'
+  this.upChevronIconClass = 'govuk-accordion-nav__chevron'
+  this.downChevronIconClass = 'govuk-accordion-nav__chevron--down'
 }
 
 // Initialize component
@@ -65,7 +65,7 @@ Accordion.prototype.initControls = function () {
 
   // Create icon, add to element
   var icon = document.createElement('span')
-  icon.classList.add(this.upChevonIconClass)
+  icon.classList.add(this.upChevronIconClass)
   this.$openAllButton.appendChild(icon)
 
   // Create control wrapper and add controls to it
@@ -130,7 +130,7 @@ Accordion.prototype.initHeaderAttributes = function ($headerWrapper, index) {
   // Build additional wrapper for toggle text, place icon after wrapped text.
   var wrapperShowHideIcon = document.createElement('span')
   var icon = document.createElement('span')
-  icon.classList.add(this.upChevonIconClass)
+  icon.classList.add(this.upChevronIconClass)
   showIcons.appendChild(icon)
   wrapperShowHideIcon.classList.add(this.sectionShowHideTextClass)
   showIcons.insertBefore(wrapperShowHideIcon, showIcons.childNodes[0] || null)
@@ -183,7 +183,7 @@ Accordion.prototype.onOpenOrCloseAllToggle = function () {
 
 // Set section attributes when opened/closed
 Accordion.prototype.setExpanded = function (expanded, $section) {
-  var $icon = $section.querySelector('.' + this.upChevonIconClass)
+  var $icon = $section.querySelector('.' + this.upChevronIconClass)
   var $showHideText = $section.querySelector('.' + this.sectionShowHideTextClass)
   var $button = $section.querySelector('.' + this.sectionButtonClass)
   var $newButtonText = expanded ? 'Hide' : 'Show'
@@ -195,10 +195,10 @@ Accordion.prototype.setExpanded = function (expanded, $section) {
   // Swap icon, change class
   if (expanded) {
     $section.classList.add(this.sectionExpandedClass)
-    $icon.classList.remove(this.downChevonIconClass)
+    $icon.classList.remove(this.downChevronIconClass)
   } else {
     $section.classList.remove(this.sectionExpandedClass)
-    $icon.classList.add(this.downChevonIconClass)
+    $icon.classList.add(this.downChevronIconClass)
   }
 
   // See if "Show all sections" button text should be updated
@@ -224,7 +224,7 @@ Accordion.prototype.checkIfAllSectionsOpen = function () {
 
 // Update "Show all sections" button
 Accordion.prototype.updateOpenAllButton = function (expanded) {
-  var $icon = this.$openAllButton.querySelector('.' + this.upChevonIconClass)
+  var $icon = this.$openAllButton.querySelector('.' + this.upChevronIconClass)
   var $openAllCopy = this.$openAllButton.querySelector('.' + this.openAllTextClass)
   var newButtonText = expanded ? 'Hide all sections' : 'Show all sections'
   this.$openAllButton.setAttribute('aria-expanded', expanded)
@@ -232,9 +232,9 @@ Accordion.prototype.updateOpenAllButton = function (expanded) {
 
   // Swap icon, toggle class
   if (expanded) {
-    $icon.classList.remove(this.downChevonIconClass)
+    $icon.classList.remove(this.downChevronIconClass)
   } else {
-    $icon.classList.add(this.downChevonIconClass)
+    $icon.classList.add(this.downChevronIconClass)
   }
 }
 
