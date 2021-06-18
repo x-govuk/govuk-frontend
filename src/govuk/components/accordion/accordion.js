@@ -30,6 +30,7 @@ function Accordion ($module) {
 
   this.sectionHeaderClass = 'govuk-accordion__section-header'
   this.sectionHeadingClass = 'govuk-accordion__section-heading'
+  this.sectionHeadingClassFocusWrapper = 'govuk-accordion__section-heading-focus-wrapper'
   this.sectionSummaryClass = 'govuk-accordion__section-summary'
   this.sectionButtonClass = 'govuk-accordion__section-button'
   this.sectionExpandedClass = 'govuk-accordion__section--expanded'
@@ -117,6 +118,10 @@ Accordion.prototype.initHeaderAttributes = function ($headerWrapper, index) {
   var showIcons = document.createElement('span')
   showIcons.classList.add(this.sectionShowHideIconClass, this.toggleLinkClass)
 
+  // Wrapper header to receive focus state design
+  var $wrapperFocusHeading = document.createElement('span')
+  $wrapperFocusHeading.classList.add(this.sectionHeadingClassFocusWrapper)
+
   // Add pause after heading for assistive technology.
   var $srPause = document.createElement('span')
   $srPause.classList.add('govuk-visually-hidden')
@@ -142,9 +147,10 @@ Accordion.prototype.initHeaderAttributes = function ($headerWrapper, index) {
   }
 
   // span could contain HTML elements (see https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content)
-  $button.innerHTML = $span.innerHTML
   $heading.removeChild($span)
   $heading.appendChild($button)
+  $button.appendChild($wrapperFocusHeading)
+  $wrapperFocusHeading.innerHTML = $span.innerHTML
   $button.appendChild($srPause)
 
   // If summary content exists add to DOM in correct order
