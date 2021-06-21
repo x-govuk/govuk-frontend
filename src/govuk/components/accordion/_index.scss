@@ -1,15 +1,14 @@
 @include govuk-exports("govuk/component/accordion") {
   $govuk-accordion-border-width: 3px;
   $govuk-accordion-bottom-border-width: 1px;
-  $govuk-accordion-hover-colour: govuk-colour("light-grey", $legacy: "grey-3");
   $govuk-accordion-base-colour: govuk-colour("black");
+  $govuk-accordion-hover-colour: govuk-colour("light-grey", $legacy: "grey-3");
 
   // Buttons within the sections don’t need default styling
   .govuk-accordion__section-button {
     display: inline-block;
     margin-bottom: 0;
     padding-top: govuk-spacing(3);
-    font-weight: bold;
     @include govuk-font($size: 24, $weight: bold, $line-height: 1);
   }
 
@@ -33,7 +32,7 @@
     .govuk-accordion__open-all {
       position: relative;
       z-index: 1;
-      margin-bottom: govuk-spacing(2);
+      margin: 0 0 govuk-spacing(2) 0;
       padding: 7px 2px 7px 0;
       border-width: 0;
       color: $govuk-link-colour;
@@ -47,6 +46,27 @@
         padding: 0;
         border: 0;
       }
+
+      &:focus {
+        @include govuk-focused-text;
+      }
+    }
+
+    // Space between icon and text, avoid placing on icon due to transform
+    .govuk-accordion__open-all-text,
+    .govuk-accordion__toggle-text {
+      margin-left: 5px;
+    }
+
+    .govuk-accordion__section-heading {
+      // Override browser defaults to ensure consistent element height
+      margin-top: 0; // Override browser default
+      margin-bottom: 0; // Override browser default
+      @include govuk-font(24);
+    }
+
+    .govuk-accordion__section-header {
+      position: relative;
     }
 
     .govuk-accordion__section-heading-focus-wrapper {
@@ -60,7 +80,6 @@
       position: relative;
       width: 20px;
       height: 20px;
-      margin-right: 5px;
       border: 1px solid;
       border-radius: 100px;
       vertical-align: text-top;
@@ -86,67 +105,9 @@
       }
     }
 
-    // Alter Chervon colours on hover
-    .govuk-accordion__open-all:hover,
-    .govuk-accordion__section-button:hover {
-      color: $govuk-accordion-base-colour;
-      background: $govuk-accordion-hover-colour;
-
-      .govuk-accordion-nav__chevron:after {
-        color: $govuk-accordion-hover-colour;
-      }
-
-      .govuk-accordion-nav__chevron {
-        color: $govuk-accordion-base-colour;
-        background: $govuk-accordion-base-colour;
-        text-decoration: none;
-      }
-    }
-
-    .govuk-accordion__open-all:focus {
-      @include govuk-focused-text;
-    }
-
-    .govuk-accordion__open-all:focus,
-    .govuk-accordion__section-button:focus {
-      // Alter Chervon colours on focus
-      .govuk-accordion-nav__chevron {
-        background: $govuk-accordion-base-colour;
-        text-decoration: none;
-      }
-
-      .govuk-accordion-nav__chevron:after {
-        color: govuk-colour("yellow");
-      }
-    }
-
     // Rotate icon to create "Down" version
     .govuk-accordion-nav__chevron--down {
       transform: rotate(180deg);
-    }
-
-    .govuk-accordion__section-heading {
-      // Override browser defaults to ensure consistent element height
-      margin-top: 0; // Override browser default
-      margin-bottom: 0; // Override browser default
-      @include govuk-font(24);
-    }
-
-    .govuk-accordion__section-header {
-      position: relative;
-    }
-
-    // For devices that can't hover such as touch devices,
-    // remove hover state as it can be stuck in that state (iOS).
-    @media (hover: none) {
-      .govuk-accordion__section-header:hover {
-        border-top-color: $govuk-link-colour;
-        box-shadow: inset 0 $govuk-accordion-border-width 0 0 $govuk-link-colour;
-
-        .govuk-accordion__section-button {
-          border-top-color: $govuk-link-colour;
-        }
-      }
     }
 
     // Buttons within the headers don’t need default styling
@@ -179,15 +140,84 @@
         padding: 0;
         border: 0;
       }
+
+      // Extend the touch area of the button to span the section header
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    // Add toggle link with Chevron icon on right.
+    .govuk-accordion__toggle-link {
+      display: block;
+      margin-top: govuk-spacing(1);
+      margin-bottom: govuk-spacing(1);
+      color: $govuk-link-colour;
+      text-transform: capitalize;
+      @include govuk-font($size: 19, $line-height: 1);
+
+      &:active {
+        background: $govuk-link-active-colour;
+      }
     }
 
     // Allows the width of the focus state match the width of the content
     .govuk-accordion__toggle-link,
     .govuk-accordion__section-heading-focus-wrapper,
     .govuk-accordion__section-summary {
-      display: inline-block;
       float: left;
       clear: left;
+    }
+
+    // Alter colours on hover
+    .govuk-accordion__open-all:hover:not(:focus),
+    .govuk-accordion__section-button:hover {
+      color: $govuk-accordion-base-colour;
+      background: $govuk-accordion-hover-colour;
+
+      .govuk-accordion__toggle-text {
+        color: $govuk-accordion-base-colour;
+      }
+
+      .govuk-accordion-nav__chevron {
+        color: $govuk-accordion-base-colour;
+        background: $govuk-accordion-base-colour;
+        text-decoration: none;
+      }
+
+      .govuk-accordion-nav__chevron:after {
+        color: $govuk-accordion-hover-colour;
+      }
+    }
+
+    // Alter Chervon colours on focus
+    .govuk-accordion__open-all:focus,
+    .govuk-accordion__section-button:focus {
+      .govuk-accordion-nav__chevron {
+        background: $govuk-accordion-base-colour;
+      }
+
+      .govuk-accordion-nav__chevron:after {
+        color: govuk-colour("yellow");
+      }
+    }
+
+    // For devices that can't hover such as touch devices,
+    // remove hover state as it can be stuck in that state (iOS).
+    @media (hover: none) {
+      .govuk-accordion__section-header:hover {
+        border-top-color: $govuk-border-colour;
+        box-shadow: inset 0 $govuk-accordion-border-width 0 0 $govuk-link-colour;
+
+        .govuk-accordion__section-button {
+          border-top-color: $govuk-border-colour;
+        }
+      }
     }
 
     // When the button is in focus:
@@ -212,21 +242,6 @@
       }
     }
 
-    // Extend the touch area of the button to span the section header
-    .govuk-accordion__section-button:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
-    .govuk-accordion__section-button:hover:not(:focus) {
-      background: $govuk-accordion-hover-colour;
-      text-decoration: none;
-    }
-
     // For devices that can't hover such as touch devices,
     // remove hover state as it can be stuck in that state (iOS).
     @media (hover: none) {
@@ -235,49 +250,12 @@
       }
     }
 
-    // Add toggle link with Chevron icon on right.
-    .govuk-accordion__toggle-link {
-      display: block;
-      margin-top: govuk-spacing(1);
-      margin-bottom: govuk-spacing(1);
-      color: $govuk-link-colour;
-      text-transform: capitalize;
-      @include govuk-font($size: 19, $line-height: 1);
-
-      &:active {
-        background: $govuk-link-active-colour;
-      }
-    }
-
-    // Slight vertical alignment adjustments
-    .govuk-accordion__toggle-text {
-      vertical-align: top;
-    }
-
-    .govuk-accordion__open-all-text {
-      vertical-align: text-bottom;
-    }
-
-    // On hover add underline to toggle link only:
-    .govuk-accordion__section-button:hover .govuk-accordion__toggle-text {
-      color: $govuk-accordion-base-colour;
-    }
-
-    // Ensure the correct focus state text colour and no underline:
-    .govuk-accordion__section-button:focus .govuk-accordion__toggle-text {
-      text-decoration: none;
-    }
-
-    .govuk-accordion__open-all:focus .govuk-accordion__open-all-text {
-      text-decoration: none;
-    }
-
     // Change the summary subheading size.govuk-accordion__section-summary
     .govuk-accordion__section-summary {
       @include govuk-responsive-margin(1, "top");
-      @include govuk-responsive-margin(1, "bottom");
+      @include govuk-responsive-margin(2, "bottom");
       @include govuk-typography-common;
-      @include govuk-typography-responsive($size: 19);
+      @include govuk-typography-responsive($size: 19, $override-line-height: 1);
     }
 
     // Hide body of expanded sections
