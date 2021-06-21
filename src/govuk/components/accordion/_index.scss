@@ -154,7 +154,7 @@
 
     // Add toggle link with Chevron icon on right.
     .govuk-accordion__toggle-link {
-      display: block;
+      display: inline;
       margin-top: govuk-spacing(1);
       margin-bottom: govuk-spacing(1);
       color: $govuk-link-colour;
@@ -163,6 +163,11 @@
 
       &:active {
         background: $govuk-link-active-colour;
+      }
+
+      &:before {
+        content: "";
+        display: block;
       }
     }
 

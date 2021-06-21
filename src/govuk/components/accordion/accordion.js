@@ -122,11 +122,6 @@ Accordion.prototype.initHeaderAttributes = function ($headerWrapper, index) {
   var $wrapperFocusHeading = document.createElement('span')
   $wrapperFocusHeading.classList.add(this.sectionHeadingClassFocusWrapper)
 
-  // Add pause after heading for assistive technology.
-  var $srPause = document.createElement('span')
-  $srPause.classList.add('govuk-visually-hidden')
-  $srPause.innerHTML = ', '
-
   // Build additional copy for assistive technology
   var srAdditionalCopy = document.createElement('span')
   srAdditionalCopy.classList.add('govuk-visually-hidden')
@@ -151,7 +146,6 @@ Accordion.prototype.initHeaderAttributes = function ($headerWrapper, index) {
   $heading.appendChild($button)
   $button.appendChild($wrapperFocusHeading)
   $wrapperFocusHeading.innerHTML = $span.innerHTML
-  $button.appendChild($srPause)
 
   // If summary content exists add to DOM in correct order
   if (typeof ($summary) !== 'undefined' && $summary !== null) {
