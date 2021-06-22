@@ -190,3 +190,34 @@ describe('Checkboxes with a None checkbox and conditional reveals', () => {
     })
   })
 })
+
+describe('Checkboxes with multiple groups and a None checkbox and conditional reveals', () => {
+  describe('when JavaScript is available', () => {
+    it('unchecks other checkboxes in other groups', async () => {
+      await page.goto(`${baseUrl}/examples/conditional-reveals`)
+      const html = await page.evaluate(() => document.body.innerHTML)
+      const $ = cheerio.load(html)
+
+      // Check the second checkbox in the first group, which reveals additional content
+      await page.click('#colour-primary-2')
+
+      const $checkedInput = $('#colour-primary-2')
+      const conditionalContentId = $checkedInput.attr('aria-controls')
+
+      // Expect conditional reveal to be visible
+      const isConditionalContentVisible = await waitForVisibleSelector(`[id="${conditionalContentId}"]`)
+      expect(isConditionalContentVisible).toBeTruthy()
+
+      // Check the None checkbox
+      await page.click('#colour-other-3')
+
+      // Expect the second checkbox in the first group to be unchecked
+      const otherCheckboxIsUnchecked = await waitForVisibleSelector('[id="colour-primary-2"]:not(:checked)')
+      expect(otherCheckboxIsUnchecked).toBeTruthy()
+
+      // Expect conditional content to have been hidden
+      const isConditionalContentHidden = await waitForHiddenSelector(`[id="${conditionalContentId}"]`)
+      expect(isConditionalContentHidden).toBeTruthy()
+    })
+  })
+})
