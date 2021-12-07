@@ -1014,135 +1014,203 @@ if (detect) return
 
 }).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
 
-/**
- * TODO: Ideally this would be a NodeList.prototype.forEach polyfill
- * This seems to fail in IE8, requires more investigation.
- * See: https://github.com/imagitama/nodelist-foreach-polyfill
- */
-function nodeListForEach (nodes, callback) {
-  if (window.NodeList.prototype.forEach) {
-    return nodes.forEach(callback)
-  }
-  for (var i = 0; i < nodes.length; i++) {
-    callback.call(window, nodes[i], i, nodes);
-  }
-}
-
-function Radios ($module) {
+function Input ($module) {
   this.$module = $module;
-  this.$inputs = $module.querySelectorAll('input[type="radio"]');
 }
 
-/**
- * Initialise Radios
- *
- * Radios can be associated with a 'conditionally revealed' content block – for
- * example, a radio for 'Phone' could reveal an additional form field for the
- * user to enter their phone number.
- *
- * These associations are made using a `data-aria-controls` attribute, which is
- * promoted to an aria-controls attribute during initialisation.
- *
- * We also need to restore the state of any conditional reveals on the page (for
- * example if the user has navigated back), and set up event handlers to keep
- * the reveal in sync with the radio state.
- */
-Radios.prototype.init = function () {
-  var $module = this.$module;
-  var $inputs = this.$inputs;
+Input.prototype.init = function () {
+  this.$formGroup = this.$module.parentNode.parentNode; // .form-group
 
-  nodeListForEach($inputs, function ($input) {
-    var target = $input.getAttribute('data-aria-controls');
+  var suggestionsId = this.$module.getAttribute('data-suggestions');
 
-    // Skip radios without data-aria-controls attributes, or where the
-    // target element does not exist.
-    if (!target || !document.getElementById(target)) {
-      return
-    }
+  if (suggestionsId) {
+    this.suggestions = document.getElementById(suggestionsId);
 
-    // Promote the data-aria-controls attribute to a aria-controls attribute
-    // so that the relationship is exposed in the AOM
-    $input.setAttribute('aria-controls', target);
-    $input.removeAttribute('data-aria-controls');
-  });
+    this.$formGroup.setAttribute('role', 'combobox');
+    this.$formGroup.setAttribute('aria-owns', this.$module.getAttribute('id'));
+    this.$formGroup.setAttribute('aria-haspopup', 'listbox');
+    this.$formGroup.setAttribute('aria-expanded', 'false');
 
-  // When the page is restored after navigating 'back' in some browsers the
-  // state of form controls is not restored until *after* the DOMContentLoaded
-  // event is fired, so we need to sync after the pageshow event in browsers
-  // that support it.
-  if ('onpageshow' in window) {
-    window.addEventListener('pageshow', this.syncAllConditionalReveals.bind(this));
-  } else {
-    window.addEventListener('DOMContentLoaded', this.syncAllConditionalReveals.bind(this));
-  }
+    this.$suggestionsHeader = document.createElement('h2');
+    this.$suggestionsHeader.setAttribute('class', 'govuk-input__suggestions-header');
+    this.$suggestionsHeader.textContent = 'Suggestions';
+    this.$suggestionsHeader.hidden = true;
 
-  // Although we've set up handlers to sync state on the pageshow or
-  // DOMContentLoaded event, init could be called after those events have fired,
-  // for example if they are added to the page dynamically, so sync now too.
-  this.syncAllConditionalReveals();
+    this.$ul = document.createElement('ul');
+    this.$ul.setAttribute('id', this.$module.getAttribute('id') + '-suggestions');
+    this.$ul.addEventListener('click', this.handleSuggestionClicked.bind(this));
+    this.$ul.addEventListener('keydown', this.handleSuggestionsKeyDown.bind(this));
+    this.$ul.hidden = true;
+    this.$ul.setAttribute('class', 'govuk-input__suggestions-list');
+    this.$ul.setAttribute('role', 'listbox');
 
-  // Handle events
-  $module.addEventListener('click', this.handleClick.bind(this));
-};
+    this.$formGroup.appendChild(this.$suggestionsHeader);
+    this.$formGroup.appendChild(this.$ul);
 
-/**
- * Sync the conditional reveal states for all inputs in this $module.
- */
-Radios.prototype.syncAllConditionalReveals = function () {
-  nodeListForEach(this.$inputs, this.syncConditionalRevealWithInputState.bind(this));
-};
-
-/**
- * Sync conditional reveal with the input state
- *
- * Synchronise the visibility of the conditional reveal, and its accessible
- * state, with the input's checked state.
- *
- * @param {HTMLInputElement} $input Radio input
- */
-Radios.prototype.syncConditionalRevealWithInputState = function ($input) {
-  var $target = document.getElementById($input.getAttribute('aria-controls'));
-
-  if ($target && $target.classList.contains('govuk-radios__conditional')) {
-    var inputIsChecked = $input.checked;
-
-    $input.setAttribute('aria-expanded', inputIsChecked);
-    $target.classList.toggle('govuk-radios__conditional--hidden', !inputIsChecked);
+    this.$module.addEventListener('input', this.handleInputInput.bind(this));
+    this.$module.addEventListener('keydown', this.handleInputKeyDown.bind(this));
   }
 };
 
-/**
- * Click event handler
- *
- * Handle a click within the $module – if the click occurred on a radio, sync
- * the state of the conditional reveal for all radio buttons in the same form
- * with the same name (because checking one radio could have un-checked a radio
- * in another $module)
- *
- * @param {MouseEvent} event Click event
- */
-Radios.prototype.handleClick = function (event) {
-  var $clickedInput = event.target;
+// On input, update the options and display the list
+Input.prototype.handleInputInput = function (event) {
+  this.updateSuggestions();
+};
 
-  // Ignore clicks on things that aren't radio buttons
-  if ($clickedInput.type !== 'radio') {
+Input.prototype.updateSuggestions = function () {
+  if (this.$module.value.trim().length < 2) {
+    this.hideSuggestions();
     return
   }
 
-  // We only need to consider radios with conditional reveals, which will have
-  // aria-controls attributes.
-  var $allInputs = document.querySelectorAll('input[type="radio"][aria-controls]');
+  // Build an array of regexes that search for each word of the query
+  var queryRegexes = this.$module.value.trim()
+    .replace(/['’]/g, '')
+    .replace(/[.,"/#!$%^&*;:{}=\-_~()]/g, ' ')
+    .split(/\s+/).map(function (word) {
+      return new RegExp('\\b' + word, 'i')
+    });
 
-  nodeListForEach($allInputs, function ($input) {
-    var hasSameFormOwner = ($input.form === $clickedInput.form);
-    var hasSameName = ($input.name === $clickedInput.name);
+  var matchingOptions = [];
 
-    if (hasSameName && hasSameFormOwner) {
-      this.syncConditionalRevealWithInputState($input);
+  for (var option of this.suggestions.getElementsByTagName('option')) {
+    var optionTextAndSynonyms = [option.textContent];
+    var synonyms = option.getAttribute('data-synonyms');
+
+    if (synonyms) {
+      optionTextAndSynonyms = optionTextAndSynonyms.concat(synonyms.split('|'));
     }
-  }.bind(this));
+
+    if (
+      (
+        optionTextAndSynonyms.find(function (name) {
+          return (queryRegexes.filter(function (regex) { return name.search(regex) >= 0 }).length === queryRegexes.length)
+        })
+      )
+    ) { matchingOptions.push(option); }
+  }
+
+  if (matchingOptions.length === 0) {
+    this.displayNoSuggestionsFound();
+  } else if (matchingOptions.length === 1 && matchingOptions[0].textContent === this.$module.value.trim()) {
+    this.hideSuggestions();
+  } else {
+    this.updateSuggestionsWithOptions(matchingOptions);
+  }
 };
 
-return Radios;
+Input.prototype.updateSuggestionsWithOptions = function (options) {
+  // Remove all the existing suggestions
+  this.$ul.textContent = '';
+
+  for (var option of options) {
+    var li = document.createElement('li');
+    li.textContent = option.textContent;
+    li.setAttribute('role', 'option');
+    li.setAttribute('tabindex', '-1');
+    li.setAttribute('aria-selected', option.value === this.$module.value);
+    li.setAttribute('data-value', option.value);
+    li.setAttribute('class', 'govuk-input__suggestion');
+    // li.addEventListener('mouseenter', this.handleMouseEntered.bind(this))
+    this.$ul.appendChild(li);
+  }
+
+  this.$ul.hidden = false;
+  this.$suggestionsHeader.hidden = false;
+};
+
+Input.prototype.handleSuggestionClicked = function (event) {
+  var suggestionClicked = event.target;
+  this.selectSuggestion(suggestionClicked);
+};
+
+Input.prototype.selectSuggestion = function (option) {
+  option.setAttribute('aria-selected', 'true');
+  this.$module.value = option.textContent;
+
+  this.$module.focus();
+  this.hideSuggestions();
+};
+
+// On key down, check if the key pressed an up/down arrow or tab
+Input.prototype.handleInputKeyDown = function (event) {
+  switch (event.keyCode) {
+    // Down
+    case 40:
+      if (this.$ul.hidden !== true) {
+        // Move focus to first option if there are any.
+        if (this.$ul.querySelector('li[role="option"]')) {
+          this.moveFocusToOptions();
+        }
+        event.preventDefault();
+      }
+      break
+    // Up
+    case 38:
+      if (this.$ul.hidden !== true) {
+        // Move focus to last option if there are any.
+        if (this.$ul.querySelector('li[role="option"]')) {
+          this.moveFocusToOptions(false);
+        }
+        event.preventDefault();
+      }
+      break
+    // Tab
+    case 9:
+      this.hideSuggestions();
+      break
+  }
+};
+
+// Note: this has to be triggered on keydown instead of keyup so that if another
+// character is pressed, the focus can be moved to the input before the keyup event
+// is fired, allowing the character to be entered into the input.
+Input.prototype.handleSuggestionsKeyDown = function (event) {
+  var optionSelected;
+  switch (event.keyCode) {
+    // Down
+    case 40:
+      optionSelected = this.$ul.querySelector('li:focus');
+      if (optionSelected.nextSibling) {
+        optionSelected.nextSibling.focus();
+      }
+      event.preventDefault();
+      break
+    // Up
+    case 38:
+      optionSelected = this.$ul.querySelector('li:focus');
+      if (optionSelected.previousSibling) {
+        optionSelected.previousSibling.focus();
+      } else {
+        this.$module.focus();
+      }
+      event.preventDefault();
+      break
+    // Enter
+    case 13:
+      optionSelected = this.$ul.querySelector('li:focus');
+      this.selectSuggestion(optionSelected);
+      event.preventDefault();
+      break
+    default:
+      this.$module.focus();
+  }
+};
+
+Input.prototype.moveFocusToOptions = function () {
+  this.$ul.getElementsByTagName('li')[0].focus();
+};
+
+Input.prototype.hideSuggestions = function () {
+  this.$ul.hidden = true;
+  this.$suggestionsHeader.hidden = true;
+};
+
+Input.prototype.displayNoSuggestionsFound = function () {
+  this.$ul.hidden = true;
+  this.$suggestionsHeader.hidden = true;
+};
+
+return Input;
 
 })));

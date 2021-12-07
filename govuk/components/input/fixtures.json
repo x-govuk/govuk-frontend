@@ -14,6 +14,898 @@
             "hidden": false
         },
         {
+            "name": "with suggestions",
+            "options": {
+                "label": {
+                    "text": "University"
+                },
+                "id": "input-with-suggestions",
+                "name": "test-suggestions",
+                "attributes": {
+                    "data-module": "govuk-input"
+                },
+                "suggestions": {
+                    "items": [
+                        {
+                            "text": "AA School of Architecture"
+                        },
+                        {
+                            "text": "AECC University College"
+                        },
+                        {
+                            "text": "Abertay University"
+                        },
+                        {
+                            "text": "Aberystwyth University",
+                            "synonyms": [
+                                "Aber"
+                            ]
+                        },
+                        {
+                            "text": "Anglia Ruskin University",
+                            "synonyms": [
+                                "ARU"
+                            ]
+                        },
+                        {
+                            "text": "Arden University",
+                            "synonyms": [
+                                "Resource development international"
+                            ]
+                        },
+                        {
+                            "text": "Arts University Bournemouth",
+                            "synonyms": [
+                                "AUB"
+                            ]
+                        },
+                        {
+                            "text": "Aston University"
+                        },
+                        {
+                            "text": "BIMM Institute"
+                        },
+                        {
+                            "text": "BPP University"
+                        },
+                        {
+                            "text": "Bangor University",
+                            "synonyms": [
+                                "University College of North Wales",
+                                "UCNW",
+                                "UWB"
+                            ]
+                        },
+                        {
+                            "text": "Bath Spa University"
+                        },
+                        {
+                            "text": "Birkbeck, University of London",
+                            "synonyms": [
+                                "BBK",
+                                "University of London"
+                            ]
+                        },
+                        {
+                            "text": "Birmingham City University",
+                            "synonyms": [
+                                "BCU",
+                                "Birmingham College of Art",
+                                "Birmingham Polytechnic"
+                            ]
+                        },
+                        {
+                            "text": "Bishop Grosseteste University",
+                            "synonyms": [
+                                "BGU"
+                            ]
+                        },
+                        {
+                            "text": "Bournemouth University"
+                        },
+                        {
+                            "text": "Brunel University London",
+                            "synonyms": [
+                                "West London Institute of HE"
+                            ]
+                        },
+                        {
+                            "text": "Buckinghamshire New University",
+                            "synonyms": [
+                                "Bucks",
+                                "BNU"
+                            ]
+                        },
+                        {
+                            "text": "Canterbury Christ Church University",
+                            "synonyms": [
+                                "CCCU"
+                            ]
+                        },
+                        {
+                            "text": "Cardiff Metropolitan University"
+                        },
+                        {
+                            "text": "Cardiff University",
+                            "synonyms": [
+                                "Prifysgol Caerdydd",
+                                "University College Cardiff"
+                            ]
+                        },
+                        {
+                            "text": "City, University of London",
+                            "synonyms": [
+                                "CUL",
+                                "The City University"
+                            ]
+                        },
+                        {
+                            "text": "Coventry University",
+                            "synonyms": [
+                                "University of Coventry"
+                            ]
+                        },
+                        {
+                            "text": "Cranfield University"
+                        },
+                        {
+                            "text": "De Montfort University",
+                            "synonyms": [
+                                "DMU"
+                            ]
+                        },
+                        {
+                            "text": "Durham University"
+                        },
+                        {
+                            "text": "Dyson Technical Training"
+                        },
+                        {
+                            "text": "Edge Hill University"
+                        },
+                        {
+                            "text": "Edinburgh Napier University"
+                        },
+                        {
+                            "text": "Fairfield School of Business"
+                        },
+                        {
+                            "text": "Falmouth University"
+                        },
+                        {
+                            "text": "ForMission"
+                        },
+                        {
+                            "text": "Glasgow Caledonian University",
+                            "synonyms": [
+                                "GCU",
+                                "Caley"
+                            ]
+                        },
+                        {
+                            "text": "Glasgow School of Art"
+                        },
+                        {
+                            "text": "Goldsmiths, University of London",
+                            "synonyms": [
+                                "GUL"
+                            ]
+                        },
+                        {
+                            "text": "Gower College Swansea"
+                        },
+                        {
+                            "text": "Grŵp Llandrillo Menai",
+                            "synonyms": [
+                                "Coleg Llandrillo",
+                                "Coleg Menai",
+                                "Coleg Meirion-Dwyfor"
+                            ]
+                        },
+                        {
+                            "text": "Grŵp NPTC Group"
+                        },
+                        {
+                            "text": "Guildhall School of Music and Drama",
+                            "synonyms": [
+                                "GSMD"
+                            ]
+                        },
+                        {
+                            "text": "Harper Adams University"
+                        },
+                        {
+                            "text": "Hartpury University"
+                        },
+                        {
+                            "text": "Heriot-Watt University",
+                            "synonyms": [
+                                "The Scottish College of Textiles"
+                            ]
+                        },
+                        {
+                            "text": "Hult International Business School"
+                        },
+                        {
+                            "text": "Imperial College London"
+                        },
+                        {
+                            "text": "Keele University"
+                        },
+                        {
+                            "text": "Kensington College of Business"
+                        },
+                        {
+                            "text": "Kingston University"
+                        },
+                        {
+                            "text": "King’s College London",
+                            "synonyms": [
+                                "KCL",
+                                "University of London"
+                            ]
+                        },
+                        {
+                            "text": "LAMDA"
+                        },
+                        {
+                            "text": "Lancaster University"
+                        },
+                        {
+                            "text": "Leeds Arts University"
+                        },
+                        {
+                            "text": "Leeds Beckett University",
+                            "synonyms": [
+                                "LBU",
+                                "LMU"
+                            ]
+                        },
+                        {
+                            "text": "Leeds Trinity University"
+                        },
+                        {
+                            "text": "Liverpool Hope University"
+                        },
+                        {
+                            "text": "Liverpool John Moores University",
+                            "synonyms": [
+                                "LJMU"
+                            ]
+                        },
+                        {
+                            "text": "Liverpool School of Tropical Medicine",
+                            "synonyms": [
+                                "LSTM"
+                            ]
+                        },
+                        {
+                            "text": "London Business School",
+                            "synonyms": [
+                                "LBS",
+                                "University of London"
+                            ]
+                        },
+                        {
+                            "text": "London Churchill College"
+                        },
+                        {
+                            "text": "London College of Business Studies"
+                        },
+                        {
+                            "text": "London Metropolitan University"
+                        },
+                        {
+                            "text": "London School of Economics and Political Science",
+                            "synonyms": [
+                                "LSE",
+                                "University of London"
+                            ]
+                        },
+                        {
+                            "text": "London School of Hygiene and Tropical Medicine",
+                            "synonyms": [
+                                "LSHTM",
+                                "University of London"
+                            ]
+                        },
+                        {
+                            "text": "London School of Science and Technology"
+                        },
+                        {
+                            "text": "London South Bank University",
+                            "synonyms": [
+                                "LSBU"
+                            ]
+                        },
+                        {
+                            "text": "Loughborough University",
+                            "synonyms": [
+                                "Loughborough College of Art and Design"
+                            ]
+                        },
+                        {
+                            "text": "Manchester Metropolitan University",
+                            "synonyms": [
+                                "MMU"
+                            ]
+                        },
+                        {
+                            "text": "Middlesex University London",
+                            "synonyms": [
+                                "MDX"
+                            ]
+                        },
+                        {
+                            "text": "NCG (Newcastle College Group)",
+                            "synonyms": [
+                                "Newcastle College"
+                            ]
+                        },
+                        {
+                            "text": "New College of the Humanities",
+                            "synonyms": [
+                                "NCH"
+                            ]
+                        },
+                        {
+                            "text": "Newcastle University"
+                        },
+                        {
+                            "text": "Newman University"
+                        },
+                        {
+                            "text": "Norland College"
+                        },
+                        {
+                            "text": "Northumbria University Newcastle"
+                        },
+                        {
+                            "text": "Norwich University of the Arts",
+                            "synonyms": [
+                                "NUA"
+                            ]
+                        },
+                        {
+                            "text": "Nottingham Trent University",
+                            "synonyms": [
+                                "NTU"
+                            ]
+                        },
+                        {
+                            "text": "Oxford Brookes University"
+                        },
+                        {
+                            "text": "Oxford Business College"
+                        },
+                        {
+                            "text": "Plymouth College of Art"
+                        },
+                        {
+                            "text": "Plymouth Marjon University"
+                        },
+                        {
+                            "text": "Queen Margaret University, Edinburgh",
+                            "synonyms": [
+                                "QMU"
+                            ]
+                        },
+                        {
+                            "text": "Queen Mary University of London",
+                            "synonyms": [
+                                "QMUL",
+                                "QM",
+                                "St Bartholomew's Hospital Medical College",
+                                "St Barts"
+                            ]
+                        },
+                        {
+                            "text": "Queen’s University Belfast",
+                            "synonyms": [
+                                "QUB"
+                            ]
+                        },
+                        {
+                            "text": "Ravensbourne University London"
+                        },
+                        {
+                            "text": "Regent College"
+                        },
+                        {
+                            "text": "Regent’s University London"
+                        },
+                        {
+                            "text": "Richmond, The American International University in London"
+                        },
+                        {
+                            "text": "Robert Gordon University",
+                            "synonyms": [
+                                "RGU"
+                            ]
+                        },
+                        {
+                            "text": "Rose Bruford College"
+                        },
+                        {
+                            "text": "Royal Academy of Music",
+                            "synonyms": [
+                                "RAM",
+                                "University of London"
+                            ]
+                        },
+                        {
+                            "text": "Royal Agricultural University",
+                            "synonyms": [
+                                "RAU"
+                            ]
+                        },
+                        {
+                            "text": "Royal Central School of Speech and Drama",
+                            "synonyms": [
+                                "CSSD",
+                                "University of London"
+                            ]
+                        },
+                        {
+                            "text": "Royal College of Art",
+                            "synonyms": [
+                                "RCA"
+                            ]
+                        },
+                        {
+                            "text": "Royal College of Music",
+                            "synonyms": [
+                                "RCM"
+                            ]
+                        },
+                        {
+                            "text": "Royal Conservatoire of Scotland",
+                            "synonyms": [
+                                "RCS"
+                            ]
+                        },
+                        {
+                            "text": "Royal Holloway, University of London",
+                            "synonyms": [
+                                "RH",
+                                "RHUL"
+                            ]
+                        },
+                        {
+                            "text": "Royal Northern College of Music",
+                            "synonyms": [
+                                "RNCM"
+                            ]
+                        },
+                        {
+                            "text": "Royal Veterinary College",
+                            "synonyms": [
+                                "RVC",
+                                "University of London"
+                            ]
+                        },
+                        {
+                            "text": "SOAS, University of London"
+                        },
+                        {
+                            "text": "SRUC (Scotland’s Rural College)",
+                            "synonyms": [
+                                "Scotland’s Rural College"
+                            ]
+                        },
+                        {
+                            "text": "Sheffield Hallam University",
+                            "synonyms": [
+                                "SHU"
+                            ]
+                        },
+                        {
+                            "text": "Solent University, Southampton"
+                        },
+                        {
+                            "text": "St George’s, University of London",
+                            "synonyms": [
+                                "SGUL"
+                            ]
+                        },
+                        {
+                            "text": "St Mary’s University College, Belfast"
+                        },
+                        {
+                            "text": "St Mary’s University, Twickenham"
+                        },
+                        {
+                            "text": "St Patrick’s International College"
+                        },
+                        {
+                            "text": "Staffordshire University"
+                        },
+                        {
+                            "text": "Stranmillis University College"
+                        },
+                        {
+                            "text": "Swansea University"
+                        },
+                        {
+                            "text": "TEC Partnership",
+                            "synonyms": [
+                                "GIFHE",
+                                "Grimsby Institute",
+                                "Grimsby Institute of Further and Higher Education",
+                                "Grimsby Institute of Further & Higher Education"
+                            ]
+                        },
+                        {
+                            "text": "TEDI-London"
+                        },
+                        {
+                            "text": "Teesside University"
+                        },
+                        {
+                            "text": "The London Institute of Banking & Finance",
+                            "synonyms": [
+                                "LIBF"
+                            ]
+                        },
+                        {
+                            "text": "The London Interdisciplinary School"
+                        },
+                        {
+                            "text": "The Open University",
+                            "synonyms": [
+                                "OU",
+                                "Open University"
+                            ]
+                        },
+                        {
+                            "text": "The University of Edinburgh",
+                            "synonyms": [
+                                "Edinburgh College of Art",
+                                "Moray House Institute of Education"
+                            ]
+                        },
+                        {
+                            "text": "The University of Law"
+                        },
+                        {
+                            "text": "The University of Manchester"
+                        },
+                        {
+                            "text": "The University of Manchester Institute of Science and Technology"
+                        },
+                        {
+                            "text": "The University of Sheffield",
+                            "synonyms": [
+                                "TUOS",
+                                "Sheffield University"
+                            ]
+                        },
+                        {
+                            "text": "Trinity Laban Conservatoire of Music and Dance"
+                        },
+                        {
+                            "text": "Ulster University"
+                        },
+                        {
+                            "text": "University College Birmingham"
+                        },
+                        {
+                            "text": "University College London",
+                            "synonyms": [
+                                "UCL",
+                                "University of London",
+                                "Institute of Education",
+                                "School of Pharmacy"
+                            ]
+                        },
+                        {
+                            "text": "University College of Estate Management",
+                            "synonyms": [
+                                "UCEM"
+                            ]
+                        },
+                        {
+                            "text": "University College of Osteopathy",
+                            "synonyms": [
+                                "UCO"
+                            ]
+                        },
+                        {
+                            "text": "University for the Creative Arts",
+                            "synonyms": [
+                                "UCA"
+                            ]
+                        },
+                        {
+                            "text": "University of Aberdeen"
+                        },
+                        {
+                            "text": "University of Bath"
+                        },
+                        {
+                            "text": "University of Bedfordshire"
+                        },
+                        {
+                            "text": "University of Birmingham"
+                        },
+                        {
+                            "text": "University of Bolton"
+                        },
+                        {
+                            "text": "University of Bradford",
+                            "synonyms": [
+                                "Leeds Conservatoire"
+                            ]
+                        },
+                        {
+                            "text": "University of Brighton"
+                        },
+                        {
+                            "text": "University of Bristol"
+                        },
+                        {
+                            "text": "University of Buckingham",
+                            "synonyms": [
+                                "UB"
+                            ]
+                        },
+                        {
+                            "text": "University of Cambridge"
+                        },
+                        {
+                            "text": "University of Central Lancashire",
+                            "synonyms": [
+                                "UCLan"
+                            ]
+                        },
+                        {
+                            "text": "University of Chester"
+                        },
+                        {
+                            "text": "University of Chichester"
+                        },
+                        {
+                            "text": "University of Cumbria"
+                        },
+                        {
+                            "text": "University of Derby"
+                        },
+                        {
+                            "text": "University of Dundee",
+                            "synonyms": [
+                                "Duncan of Jordanstone College of Art"
+                            ]
+                        },
+                        {
+                            "text": "University of East Anglia",
+                            "synonyms": [
+                                "UEA"
+                            ]
+                        },
+                        {
+                            "text": "University of East London",
+                            "synonyms": [
+                                "UEL"
+                            ]
+                        },
+                        {
+                            "text": "University of Essex"
+                        },
+                        {
+                            "text": "University of Exeter"
+                        },
+                        {
+                            "text": "University of Glasgow"
+                        },
+                        {
+                            "text": "University of Gloucestershire"
+                        },
+                        {
+                            "text": "University of Greenwich"
+                        },
+                        {
+                            "text": "University of Hertfordshire",
+                            "synonyms": [
+                                "UH",
+                                "UOH",
+                                "Herts"
+                            ]
+                        },
+                        {
+                            "text": "University of Huddersfield",
+                            "synonyms": [
+                                "Northern College for Residential and Community Adult Education"
+                            ]
+                        },
+                        {
+                            "text": "University of Hull",
+                            "synonyms": [
+                                "Leeds Conservatoire",
+                                "Grimsby Institute"
+                            ]
+                        },
+                        {
+                            "text": "University of Kent",
+                            "synonyms": [
+                                "Northern School of Contemporary Dance",
+                                "NSCD"
+                            ]
+                        },
+                        {
+                            "text": "University of Leeds"
+                        },
+                        {
+                            "text": "University of Leicester"
+                        },
+                        {
+                            "text": "University of Lincoln"
+                        },
+                        {
+                            "text": "University of Liverpool"
+                        },
+                        {
+                            "text": "University of London",
+                            "synonyms": [
+                                "Institute of Education"
+                            ]
+                        },
+                        {
+                            "text": "University of Northampton",
+                            "synonyms": [
+                                "UON"
+                            ]
+                        },
+                        {
+                            "text": "University of Nottingham"
+                        },
+                        {
+                            "text": "University of Oxford",
+                            "synonyms": [
+                                "Westminster College"
+                            ]
+                        },
+                        {
+                            "text": "University of Plymouth"
+                        },
+                        {
+                            "text": "University of Portsmouth"
+                        },
+                        {
+                            "text": "University of Reading"
+                        },
+                        {
+                            "text": "University of Roehampton"
+                        },
+                        {
+                            "text": "University of Salford",
+                            "synonyms": [
+                                "University College Salford"
+                            ]
+                        },
+                        {
+                            "text": "University of South Wales",
+                            "synonyms": [
+                                "University of Glamorgan",
+                                "University of Wales, Newport",
+                                "Royal Welsh College of Music and Drama"
+                            ]
+                        },
+                        {
+                            "text": "University of Southampton",
+                            "synonyms": [
+                                "SOTON",
+                                "La Sainte Union College of HE",
+                                "Winchester School of Art"
+                            ]
+                        },
+                        {
+                            "text": "University of St Andrews"
+                        },
+                        {
+                            "text": "University of Stirling"
+                        },
+                        {
+                            "text": "University of Strathclyde",
+                            "synonyms": [
+                                "Bell College"
+                            ]
+                        },
+                        {
+                            "text": "University of Suffolk",
+                            "synonyms": [
+                                "UOS"
+                            ]
+                        },
+                        {
+                            "text": "University of Sunderland"
+                        },
+                        {
+                            "text": "University of Surrey",
+                            "synonyms": [
+                                "Wimbledon School of Art"
+                            ]
+                        },
+                        {
+                            "text": "University of Sussex"
+                        },
+                        {
+                            "text": "University of Wales Trinity Saint David",
+                            "synonyms": [
+                                "UWTSD"
+                            ]
+                        },
+                        {
+                            "text": "University of Warwick"
+                        },
+                        {
+                            "text": "University of West London",
+                            "synonyms": [
+                                "UWL"
+                            ]
+                        },
+                        {
+                            "text": "University of Westminster"
+                        },
+                        {
+                            "text": "University of Winchester"
+                        },
+                        {
+                            "text": "University of Wolverhampton"
+                        },
+                        {
+                            "text": "University of Worcester"
+                        },
+                        {
+                            "text": "University of York"
+                        },
+                        {
+                            "text": "University of the Arts London",
+                            "synonyms": [
+                                "UAL",
+                                "Wimbledon College of Art",
+                                "Wimbledon College of Arts"
+                            ]
+                        },
+                        {
+                            "text": "University of the Highlands and Islands",
+                            "synonyms": [
+                                "UHI"
+                            ]
+                        },
+                        {
+                            "text": "University of the West of England, Bristol",
+                            "synonyms": [
+                                "UWE"
+                            ]
+                        },
+                        {
+                            "text": "University of the West of Scotland",
+                            "synonyms": [
+                                "UWS"
+                            ]
+                        },
+                        {
+                            "text": "WCG (Warwickshire College Group)"
+                        },
+                        {
+                            "text": "Wrexham Glyndŵr University"
+                        },
+                        {
+                            "text": "Writtle University College"
+                        },
+                        {
+                            "text": "York St John University",
+                            "synonyms": [
+                                "YSJU"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "html": "<div class=\"govuk-form-group\">\n  <label class=\"govuk-label\" for=\"input-with-suggestions\">\n    University\n  </label>\n\n<input class=\"govuk-input\" id=\"input-with-suggestions\" name=\"test-suggestions\" type=\"text\"data-suggestions=\"input-with-suggestions-suggestions\" data-module=\"govuk-input\">\n    <datalist id=\"input-with-suggestions-suggestions\">\n        <option >AA School of Architecture</option>\n      \n        <option >AECC University College</option>\n      \n        <option >Abertay University</option>\n      \n        <option  data-synonyms=\"Aber\">Aberystwyth University</option>\n      \n        <option  data-synonyms=\"ARU\">Anglia Ruskin University</option>\n      \n        <option  data-synonyms=\"Resource development international\">Arden University</option>\n      \n        <option  data-synonyms=\"AUB\">Arts University Bournemouth</option>\n      \n        <option >Aston University</option>\n      \n        <option >BIMM Institute</option>\n      \n        <option >BPP University</option>\n      \n        <option  data-synonyms=\"University College of North Wales|UCNW|UWB\">Bangor University</option>\n      \n        <option >Bath Spa University</option>\n      \n        <option  data-synonyms=\"BBK|University of London\">Birkbeck, University of London</option>\n      \n        <option  data-synonyms=\"BCU|Birmingham College of Art|Birmingham Polytechnic\">Birmingham City University</option>\n      \n        <option  data-synonyms=\"BGU\">Bishop Grosseteste University</option>\n      \n        <option >Bournemouth University</option>\n      \n        <option  data-synonyms=\"West London Institute of HE\">Brunel University London</option>\n      \n        <option  data-synonyms=\"Bucks|BNU\">Buckinghamshire New University</option>\n      \n        <option  data-synonyms=\"CCCU\">Canterbury Christ Church University</option>\n      \n        <option >Cardiff Metropolitan University</option>\n      \n        <option  data-synonyms=\"Prifysgol Caerdydd|University College Cardiff\">Cardiff University</option>\n      \n        <option  data-synonyms=\"CUL|The City University\">City, University of London</option>\n      \n        <option  data-synonyms=\"University of Coventry\">Coventry University</option>\n      \n        <option >Cranfield University</option>\n      \n        <option  data-synonyms=\"DMU\">De Montfort University</option>\n      \n        <option >Durham University</option>\n      \n        <option >Dyson Technical Training</option>\n      \n        <option >Edge Hill University</option>\n      \n        <option >Edinburgh Napier University</option>\n      \n        <option >Fairfield School of Business</option>\n      \n        <option >Falmouth University</option>\n      \n        <option >ForMission</option>\n      \n        <option  data-synonyms=\"GCU|Caley\">Glasgow Caledonian University</option>\n      \n        <option >Glasgow School of Art</option>\n      \n        <option  data-synonyms=\"GUL\">Goldsmiths, University of London</option>\n      \n        <option >Gower College Swansea</option>\n      \n        <option  data-synonyms=\"Coleg Llandrillo|Coleg Menai|Coleg Meirion-Dwyfor\">Grŵp Llandrillo Menai</option>\n      \n        <option >Grŵp NPTC Group</option>\n      \n        <option  data-synonyms=\"GSMD\">Guildhall School of Music and Drama</option>\n      \n        <option >Harper Adams University</option>\n      \n        <option >Hartpury University</option>\n      \n        <option  data-synonyms=\"The Scottish College of Textiles\">Heriot-Watt University</option>\n      \n        <option >Hult International Business School</option>\n      \n        <option >Imperial College London</option>\n      \n        <option >Keele University</option>\n      \n        <option >Kensington College of Business</option>\n      \n        <option >Kingston University</option>\n      \n        <option  data-synonyms=\"KCL|University of London\">King’s College London</option>\n      \n        <option >LAMDA</option>\n      \n        <option >Lancaster University</option>\n      \n        <option >Leeds Arts University</option>\n      \n        <option  data-synonyms=\"LBU|LMU\">Leeds Beckett University</option>\n      \n        <option >Leeds Trinity University</option>\n      \n        <option >Liverpool Hope University</option>\n      \n        <option  data-synonyms=\"LJMU\">Liverpool John Moores University</option>\n      \n        <option  data-synonyms=\"LSTM\">Liverpool School of Tropical Medicine</option>\n      \n        <option  data-synonyms=\"LBS|University of London\">London Business School</option>\n      \n        <option >London Churchill College</option>\n      \n        <option >London College of Business Studies</option>\n      \n        <option >London Metropolitan University</option>\n      \n        <option  data-synonyms=\"LSE|University of London\">London School of Economics and Political Science</option>\n      \n        <option  data-synonyms=\"LSHTM|University of London\">London School of Hygiene and Tropical Medicine</option>\n      \n        <option >London School of Science and Technology</option>\n      \n        <option  data-synonyms=\"LSBU\">London South Bank University</option>\n      \n        <option  data-synonyms=\"Loughborough College of Art and Design\">Loughborough University</option>\n      \n        <option  data-synonyms=\"MMU\">Manchester Metropolitan University</option>\n      \n        <option  data-synonyms=\"MDX\">Middlesex University London</option>\n      \n        <option  data-synonyms=\"Newcastle College\">NCG (Newcastle College Group)</option>\n      \n        <option  data-synonyms=\"NCH\">New College of the Humanities</option>\n      \n        <option >Newcastle University</option>\n      \n        <option >Newman University</option>\n      \n        <option >Norland College</option>\n      \n        <option >Northumbria University Newcastle</option>\n      \n        <option  data-synonyms=\"NUA\">Norwich University of the Arts</option>\n      \n        <option  data-synonyms=\"NTU\">Nottingham Trent University</option>\n      \n        <option >Oxford Brookes University</option>\n      \n        <option >Oxford Business College</option>\n      \n        <option >Plymouth College of Art</option>\n      \n        <option >Plymouth Marjon University</option>\n      \n        <option  data-synonyms=\"QMU\">Queen Margaret University, Edinburgh</option>\n      \n        <option  data-synonyms=\"QMUL|QM|St Bartholomew&#39;s Hospital Medical College|St Barts\">Queen Mary University of London</option>\n      \n        <option  data-synonyms=\"QUB\">Queen’s University Belfast</option>\n      \n        <option >Ravensbourne University London</option>\n      \n        <option >Regent College</option>\n      \n        <option >Regent’s University London</option>\n      \n        <option >Richmond, The American International University in London</option>\n      \n        <option  data-synonyms=\"RGU\">Robert Gordon University</option>\n      \n        <option >Rose Bruford College</option>\n      \n        <option  data-synonyms=\"RAM|University of London\">Royal Academy of Music</option>\n      \n        <option  data-synonyms=\"RAU\">Royal Agricultural University</option>\n      \n        <option  data-synonyms=\"CSSD|University of London\">Royal Central School of Speech and Drama</option>\n      \n        <option  data-synonyms=\"RCA\">Royal College of Art</option>\n      \n        <option  data-synonyms=\"RCM\">Royal College of Music</option>\n      \n        <option  data-synonyms=\"RCS\">Royal Conservatoire of Scotland</option>\n      \n        <option  data-synonyms=\"RH|RHUL\">Royal Holloway, University of London</option>\n      \n        <option  data-synonyms=\"RNCM\">Royal Northern College of Music</option>\n      \n        <option  data-synonyms=\"RVC|University of London\">Royal Veterinary College</option>\n      \n        <option >SOAS, University of London</option>\n      \n        <option  data-synonyms=\"Scotland’s Rural College\">SRUC (Scotland’s Rural College)</option>\n      \n        <option  data-synonyms=\"SHU\">Sheffield Hallam University</option>\n      \n        <option >Solent University, Southampton</option>\n      \n        <option  data-synonyms=\"SGUL\">St George’s, University of London</option>\n      \n        <option >St Mary’s University College, Belfast</option>\n      \n        <option >St Mary’s University, Twickenham</option>\n      \n        <option >St Patrick’s International College</option>\n      \n        <option >Staffordshire University</option>\n      \n        <option >Stranmillis University College</option>\n      \n        <option >Swansea University</option>\n      \n        <option  data-synonyms=\"GIFHE|Grimsby Institute|Grimsby Institute of Further and Higher Education|Grimsby Institute of Further &amp; Higher Education\">TEC Partnership</option>\n      \n        <option >TEDI-London</option>\n      \n        <option >Teesside University</option>\n      \n        <option  data-synonyms=\"LIBF\">The London Institute of Banking &amp; Finance</option>\n      \n        <option >The London Interdisciplinary School</option>\n      \n        <option  data-synonyms=\"OU|Open University\">The Open University</option>\n      \n        <option  data-synonyms=\"Edinburgh College of Art|Moray House Institute of Education\">The University of Edinburgh</option>\n      \n        <option >The University of Law</option>\n      \n        <option >The University of Manchester</option>\n      \n        <option >The University of Manchester Institute of Science and Technology</option>\n      \n        <option  data-synonyms=\"TUOS|Sheffield University\">The University of Sheffield</option>\n      \n        <option >Trinity Laban Conservatoire of Music and Dance</option>\n      \n        <option >Ulster University</option>\n      \n        <option >University College Birmingham</option>\n      \n        <option  data-synonyms=\"UCL|University of London|Institute of Education|School of Pharmacy\">University College London</option>\n      \n        <option  data-synonyms=\"UCEM\">University College of Estate Management</option>\n      \n        <option  data-synonyms=\"UCO\">University College of Osteopathy</option>\n      \n        <option  data-synonyms=\"UCA\">University for the Creative Arts</option>\n      \n        <option >University of Aberdeen</option>\n      \n        <option >University of Bath</option>\n      \n        <option >University of Bedfordshire</option>\n      \n        <option >University of Birmingham</option>\n      \n        <option >University of Bolton</option>\n      \n        <option  data-synonyms=\"Leeds Conservatoire\">University of Bradford</option>\n      \n        <option >University of Brighton</option>\n      \n        <option >University of Bristol</option>\n      \n        <option  data-synonyms=\"UB\">University of Buckingham</option>\n      \n        <option >University of Cambridge</option>\n      \n        <option  data-synonyms=\"UCLan\">University of Central Lancashire</option>\n      \n        <option >University of Chester</option>\n      \n        <option >University of Chichester</option>\n      \n        <option >University of Cumbria</option>\n      \n        <option >University of Derby</option>\n      \n        <option  data-synonyms=\"Duncan of Jordanstone College of Art\">University of Dundee</option>\n      \n        <option  data-synonyms=\"UEA\">University of East Anglia</option>\n      \n        <option  data-synonyms=\"UEL\">University of East London</option>\n      \n        <option >University of Essex</option>\n      \n        <option >University of Exeter</option>\n      \n        <option >University of Glasgow</option>\n      \n        <option >University of Gloucestershire</option>\n      \n        <option >University of Greenwich</option>\n      \n        <option  data-synonyms=\"UH|UOH|Herts\">University of Hertfordshire</option>\n      \n        <option  data-synonyms=\"Northern College for Residential and Community Adult Education\">University of Huddersfield</option>\n      \n        <option  data-synonyms=\"Leeds Conservatoire|Grimsby Institute\">University of Hull</option>\n      \n        <option  data-synonyms=\"Northern School of Contemporary Dance|NSCD\">University of Kent</option>\n      \n        <option >University of Leeds</option>\n      \n        <option >University of Leicester</option>\n      \n        <option >University of Lincoln</option>\n      \n        <option >University of Liverpool</option>\n      \n        <option  data-synonyms=\"Institute of Education\">University of London</option>\n      \n        <option  data-synonyms=\"UON\">University of Northampton</option>\n      \n        <option >University of Nottingham</option>\n      \n        <option  data-synonyms=\"Westminster College\">University of Oxford</option>\n      \n        <option >University of Plymouth</option>\n      \n        <option >University of Portsmouth</option>\n      \n        <option >University of Reading</option>\n      \n        <option >University of Roehampton</option>\n      \n        <option  data-synonyms=\"University College Salford\">University of Salford</option>\n      \n        <option  data-synonyms=\"University of Glamorgan|University of Wales, Newport|Royal Welsh College of Music and Drama\">University of South Wales</option>\n      \n        <option  data-synonyms=\"SOTON|La Sainte Union College of HE|Winchester School of Art\">University of Southampton</option>\n      \n        <option >University of St Andrews</option>\n      \n        <option >University of Stirling</option>\n      \n        <option  data-synonyms=\"Bell College\">University of Strathclyde</option>\n      \n        <option  data-synonyms=\"UOS\">University of Suffolk</option>\n      \n        <option >University of Sunderland</option>\n      \n        <option  data-synonyms=\"Wimbledon School of Art\">University of Surrey</option>\n      \n        <option >University of Sussex</option>\n      \n        <option  data-synonyms=\"UWTSD\">University of Wales Trinity Saint David</option>\n      \n        <option >University of Warwick</option>\n      \n        <option  data-synonyms=\"UWL\">University of West London</option>\n      \n        <option >University of Westminster</option>\n      \n        <option >University of Winchester</option>\n      \n        <option >University of Wolverhampton</option>\n      \n        <option >University of Worcester</option>\n      \n        <option >University of York</option>\n      \n        <option  data-synonyms=\"UAL|Wimbledon College of Art|Wimbledon College of Arts\">University of the Arts London</option>\n      \n        <option  data-synonyms=\"UHI\">University of the Highlands and Islands</option>\n      \n        <option  data-synonyms=\"UWE\">University of the West of England, Bristol</option>\n      \n        <option  data-synonyms=\"UWS\">University of the West of Scotland</option>\n      \n        <option >WCG (Warwickshire College Group)</option>\n      \n        <option >Wrexham Glyndŵr University</option>\n      \n        <option >Writtle University College</option>\n      \n        <option  data-synonyms=\"YSJU\">York St John University</option>\n      </datalist>\n  \n</div>",
+            "hidden": false
+        },
+        {
             "name": "with hint text",
             "options": {
                 "label": {
