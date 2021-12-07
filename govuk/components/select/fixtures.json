@@ -26,7 +26,337 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group\">\n  <label class=\"govuk-label\" for=\"select-1\">\n    Label text goes here\n  </label>\n\n\n  <select class=\"govuk-select\" id=\"select-1\" name=\"select-1\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\" selected>GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\" disabled>GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group\">\n  <label class=\"govuk-label\" for=\"select-1\">\n    Label text goes here\n  </label>\n\n\n  <select class=\"govuk-select\" id=\"select-1\" name=\"select-1\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\" selected\n        >GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\" disabled\n        >GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
+            "hidden": false
+        },
+        {
+            "name": "with search",
+            "options": {
+                "attributes": {
+                    "data-module": "govuk-select"
+                },
+                "id": "with-search",
+                "name": "with-search",
+                "label": {
+                    "text": "Government department"
+                },
+                "items": [
+                    {
+                        "value": null,
+                        "text": null
+                    },
+                    {
+                        "value": 1,
+                        "text": "Prime Minister's Office, 10 Downing Street"
+                    },
+                    {
+                        "value": 2,
+                        "text": "Cabinet Office",
+                        "synonyms": [
+                            "CO"
+                        ]
+                    },
+                    {
+                        "value": 3,
+                        "text": "Department for Business, Energy & Industrial Strategy",
+                        "synonyms": [
+                            "BEIS"
+                        ]
+                    },
+                    {
+                        "value": 4,
+                        "text": "Department for Digital, Culture, Media & Sport",
+                        "synonyms": [
+                            "DCMS"
+                        ]
+                    },
+                    {
+                        "value": 5,
+                        "text": "Department for Education",
+                        "synonyms": [
+                            "DfE"
+                        ]
+                    },
+                    {
+                        "value": 6,
+                        "text": "Department for Environment Food & Rural Affairs",
+                        "synonyms": [
+                            "DEFRA"
+                        ]
+                    },
+                    {
+                        "value": 7,
+                        "text": "Department for International Trade",
+                        "synonyms": [
+                            "DIT"
+                        ]
+                    },
+                    {
+                        "value": 8,
+                        "text": "Department for Levelling Up, Housing & Communities",
+                        "synonyms": [
+                            "DLUHC",
+                            "MHCLG",
+                            "Ministry for Housing, Communities and Local Government"
+                        ]
+                    },
+                    {
+                        "value": 9,
+                        "text": "Department for Transport",
+                        "synonyms": [
+                            "DfT"
+                        ]
+                    },
+                    {
+                        "value": 10,
+                        "text": "Department for Work & Pensions",
+                        "synonyms": [
+                            "DWP",
+                            "Department for Work and Pensions"
+                        ]
+                    },
+                    {
+                        "value": 11,
+                        "text": "Department of Health & Social Care",
+                        "synonyms": [
+                            "DHSC"
+                        ]
+                    },
+                    {
+                        "value": 12,
+                        "text": "Foreign, Commonwealth & Development Office",
+                        "synonyms": [
+                            "FCDO",
+                            "FCO"
+                        ]
+                    },
+                    {
+                        "value": 13,
+                        "text": "HM Treasury",
+                        "synonyms": [
+                            "HMT"
+                        ]
+                    },
+                    {
+                        "value": 14,
+                        "text": "Home Office",
+                        "synonyms": [
+                            "HO"
+                        ]
+                    },
+                    {
+                        "value": 15,
+                        "text": "Ministry of Defence",
+                        "synonyms": [
+                            "MOD"
+                        ]
+                    },
+                    {
+                        "value": 16,
+                        "text": "Ministry of Justice",
+                        "synonyms": [
+                            "MOJ"
+                        ]
+                    },
+                    {
+                        "value": 17,
+                        "text": "Northern Ireland Office"
+                    },
+                    {
+                        "value": 18,
+                        "text": "HM Land Registry"
+                    },
+                    {
+                        "value": 19,
+                        "text": "HM Revenue & Customs",
+                        "synonyms": [
+                            "HMRC"
+                        ]
+                    },
+                    {
+                        "value": 20,
+                        "text": "The Charity Commission"
+                    },
+                    {
+                        "value": 21,
+                        "text": "Competition and Markets Authority",
+                        "synonyms": [
+                            "CMA"
+                        ]
+                    },
+                    {
+                        "value": 22,
+                        "text": "Food Standards Agency",
+                        "synonyms": [
+                            "FSA"
+                        ]
+                    },
+                    {
+                        "value": 23,
+                        "text": "Forestry Commission"
+                    },
+                    {
+                        "value": 24,
+                        "text": "Office of Rail and Road",
+                        "synonyms": [
+                            "ORR"
+                        ]
+                    },
+                    {
+                        "value": 25,
+                        "text": "Ofgem"
+                    },
+                    {
+                        "value": 26,
+                        "text": "Ofqual"
+                    },
+                    {
+                        "value": 27,
+                        "text": "Ofsted"
+                    }
+                ]
+            },
+            "html": "<div class=\"govuk-form-group\">\n  <label class=\"govuk-label\" for=\"with-search\">\n    Government department\n  </label>\n\n\n  <select class=\"govuk-select\" id=\"with-search\" name=\"with-search\" data-module=\"govuk-select\">\n  \n    \n      <option value=\"\"\n        ></option>\n    \n  \n    \n      <option value=\"1\"\n        >Prime Minister&#39;s Office, 10 Downing Street</option>\n    \n  \n    \n      <option value=\"2\"\n         data-synonyms=\"CO\">Cabinet Office</option>\n    \n  \n    \n      <option value=\"3\"\n         data-synonyms=\"BEIS\">Department for Business, Energy &amp; Industrial Strategy</option>\n    \n  \n    \n      <option value=\"4\"\n         data-synonyms=\"DCMS\">Department for Digital, Culture, Media &amp; Sport</option>\n    \n  \n    \n      <option value=\"5\"\n         data-synonyms=\"DfE\">Department for Education</option>\n    \n  \n    \n      <option value=\"6\"\n         data-synonyms=\"DEFRA\">Department for Environment Food &amp; Rural Affairs</option>\n    \n  \n    \n      <option value=\"7\"\n         data-synonyms=\"DIT\">Department for International Trade</option>\n    \n  \n    \n      <option value=\"8\"\n         data-synonyms=\"DLUHC|MHCLG|Ministry for Housing, Communities and Local Government\">Department for Levelling Up, Housing &amp; Communities</option>\n    \n  \n    \n      <option value=\"9\"\n         data-synonyms=\"DfT\">Department for Transport</option>\n    \n  \n    \n      <option value=\"10\"\n         data-synonyms=\"DWP|Department for Work and Pensions\">Department for Work &amp; Pensions</option>\n    \n  \n    \n      <option value=\"11\"\n         data-synonyms=\"DHSC\">Department of Health &amp; Social Care</option>\n    \n  \n    \n      <option value=\"12\"\n         data-synonyms=\"FCDO|FCO\">Foreign, Commonwealth &amp; Development Office</option>\n    \n  \n    \n      <option value=\"13\"\n         data-synonyms=\"HMT\">HM Treasury</option>\n    \n  \n    \n      <option value=\"14\"\n         data-synonyms=\"HO\">Home Office</option>\n    \n  \n    \n      <option value=\"15\"\n         data-synonyms=\"MOD\">Ministry of Defence</option>\n    \n  \n    \n      <option value=\"16\"\n         data-synonyms=\"MOJ\">Ministry of Justice</option>\n    \n  \n    \n      <option value=\"17\"\n        >Northern Ireland Office</option>\n    \n  \n    \n      <option value=\"18\"\n        >HM Land Registry</option>\n    \n  \n    \n      <option value=\"19\"\n         data-synonyms=\"HMRC\">HM Revenue &amp; Customs</option>\n    \n  \n    \n      <option value=\"20\"\n        >The Charity Commission</option>\n    \n  \n    \n      <option value=\"21\"\n         data-synonyms=\"CMA\">Competition and Markets Authority</option>\n    \n  \n    \n      <option value=\"22\"\n         data-synonyms=\"FSA\">Food Standards Agency</option>\n    \n  \n    \n      <option value=\"23\"\n        >Forestry Commission</option>\n    \n  \n    \n      <option value=\"24\"\n         data-synonyms=\"ORR\">Office of Rail and Road</option>\n    \n  \n    \n      <option value=\"25\"\n        >Ofgem</option>\n    \n  \n    \n      <option value=\"26\"\n        >Ofqual</option>\n    \n  \n    \n      <option value=\"27\"\n        >Ofsted</option>\n    \n  \n  </select>\n</div>",
+            "hidden": false
+        },
+        {
+            "name": "with auto-select and a custom no results message",
+            "options": {
+                "attributes": {
+                    "data-module": "govuk-select"
+                },
+                "id": "with-search-and-custom-message",
+                "name": "with-search-and-custom-message",
+                "label": {
+                    "text": "Subject"
+                },
+                "noResults": "No subject found – contact support if you need to add a subject",
+                "items": [
+                    {
+                        "value": null,
+                        "text": null
+                    },
+                    {
+                        "value": "english",
+                        "text": "English"
+                    },
+                    {
+                        "value": "maths",
+                        "text": "Mathematics",
+                        "synonyms": [
+                            "Maths"
+                        ]
+                    },
+                    {
+                        "value": "science",
+                        "text": "Science"
+                    },
+                    {
+                        "value": "french",
+                        "text": "French"
+                    },
+                    {
+                        "value": "german",
+                        "text": "German"
+                    },
+                    {
+                        "value": "geography",
+                        "text": "Georgraphy"
+                    },
+                    {
+                        "value": "history",
+                        "text": "History"
+                    }
+                ]
+            },
+            "html": "<div class=\"govuk-form-group\">\n  <label class=\"govuk-label\" for=\"with-search-and-custom-message\">\n    Subject\n  </label>\n\n\n  <select class=\"govuk-select\" id=\"with-search-and-custom-message\" name=\"with-search-and-custom-message\" data-module=\"govuk-select\" data-no-results=\"No subject found – contact support if you need to add a subject\">\n  \n    \n      <option value=\"\"\n        ></option>\n    \n  \n    \n      <option value=\"english\"\n        >English</option>\n    \n  \n    \n      <option value=\"maths\"\n         data-synonyms=\"Maths\">Mathematics</option>\n    \n  \n    \n      <option value=\"science\"\n        >Science</option>\n    \n  \n    \n      <option value=\"french\"\n        >French</option>\n    \n  \n    \n      <option value=\"german\"\n        >German</option>\n    \n  \n    \n      <option value=\"geography\"\n        >Georgraphy</option>\n    \n  \n    \n      <option value=\"history\"\n        >History</option>\n    \n  \n  </select>\n</div>",
+            "hidden": false
+        },
+        {
+            "name": "with search and a hint",
+            "options": {
+                "attributes": {
+                    "data-module": "govuk-select"
+                },
+                "id": "with-search-and-a-hint",
+                "name": "with-search-and-a-hint",
+                "label": {
+                    "text": "Subject"
+                },
+                "hint": {
+                    "text": "Select the closest match"
+                },
+                "items": [
+                    {
+                        "value": null,
+                        "text": null
+                    },
+                    {
+                        "value": "english",
+                        "text": "English"
+                    },
+                    {
+                        "value": "maths",
+                        "text": "Mathematics",
+                        "synonyms": [
+                            "Maths"
+                        ]
+                    },
+                    {
+                        "value": "science",
+                        "text": "Science"
+                    },
+                    {
+                        "value": "french",
+                        "text": "French"
+                    },
+                    {
+                        "value": "german",
+                        "text": "German"
+                    },
+                    {
+                        "value": "geography",
+                        "text": "Georgraphy"
+                    },
+                    {
+                        "value": "history",
+                        "text": "History"
+                    }
+                ]
+            },
+            "html": "<div class=\"govuk-form-group\">\n  <label class=\"govuk-label\" for=\"with-search-and-a-hint\">\n    Subject\n  </label>\n\n  \n  \n  <div id=\"with-search-and-a-hint-hint\" class=\"govuk-hint\">\n    Select the closest match\n  </div>\n\n\n  <select class=\"govuk-select\" id=\"with-search-and-a-hint\" name=\"with-search-and-a-hint\" aria-describedby=\"with-search-and-a-hint-hint\" data-module=\"govuk-select\">\n  \n    \n      <option value=\"\"\n        ></option>\n    \n  \n    \n      <option value=\"english\"\n        >English</option>\n    \n  \n    \n      <option value=\"maths\"\n         data-synonyms=\"Maths\">Mathematics</option>\n    \n  \n    \n      <option value=\"science\"\n        >Science</option>\n    \n  \n    \n      <option value=\"french\"\n        >French</option>\n    \n  \n    \n      <option value=\"german\"\n        >German</option>\n    \n  \n    \n      <option value=\"geography\"\n        >Georgraphy</option>\n    \n  \n    \n      <option value=\"history\"\n        >History</option>\n    \n  \n  </select>\n</div>",
+            "hidden": false
+        },
+        {
+            "name": "with search and error message",
+            "options": {
+                "id": "with-search-and-error",
+                "name": "with-search-and-error",
+                "label": {
+                    "text": "Label text goes here"
+                },
+                "errorMessage": {
+                    "text": "Error message goes here"
+                },
+                "attributes": {
+                    "data-module": "govuk-select"
+                },
+                "items": [
+                    {
+                        "value": 1,
+                        "text": "GOV.UK frontend option 1"
+                    },
+                    {
+                        "value": 2,
+                        "text": "GOV.UK frontend option 2"
+                    },
+                    {
+                        "value": 3,
+                        "text": "GOV.UK frontend option 3"
+                    }
+                ]
+            },
+            "html": "<div class=\"govuk-form-group govuk-form-group--error\">\n  <label class=\"govuk-label\" for=\"with-search-and-error\">\n    Label text goes here\n  </label>\n\n\n  \n  \n  <span id=\"with-search-and-error-error\" class=\"govuk-error-message\">\n    <span class=\"govuk-visually-hidden\">Error:</span> Error message goes here\n  </span>\n\n  <select class=\"govuk-select govuk-select--error\" id=\"with-search-and-error\" name=\"with-search-and-error\" aria-describedby=\"with-search-and-error-error\" data-module=\"govuk-select\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\"\n        >GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\"\n        >GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
             "hidden": false
         },
         {
@@ -58,7 +388,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group govuk-form-group--error\">\n  <label class=\"govuk-label\" for=\"select-2\">\n    Label text goes here\n  </label>\n\n  \n  \n  <div id=\"select-2-hint\" class=\"govuk-hint\">\n    Hint text goes here\n  </div>\n\n\n  \n  \n  <span id=\"select-2-error\" class=\"govuk-error-message\">\n    <span class=\"govuk-visually-hidden\">Error:</span> Error message goes here\n  </span>\n\n  <select class=\"govuk-select govuk-select--error\" id=\"select-2\" name=\"select-2\" aria-describedby=\"select-2-hint select-2-error\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\">GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\">GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group govuk-form-group--error\">\n  <label class=\"govuk-label\" for=\"select-2\">\n    Label text goes here\n  </label>\n\n  \n  \n  <div id=\"select-2-hint\" class=\"govuk-hint\">\n    Hint text goes here\n  </div>\n\n\n  \n  \n  <span id=\"select-2-error\" class=\"govuk-error-message\">\n    <span class=\"govuk-visually-hidden\">Error:</span> Error message goes here\n  </span>\n\n  <select class=\"govuk-select govuk-select--error\" id=\"select-2\" name=\"select-2\" aria-describedby=\"select-2-hint select-2-error\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\"\n        >GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\"\n        >GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
             "hidden": false
         },
         {
@@ -87,7 +417,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group\">\n  <h1 class=\"govuk-label-wrapper\">\n    <label class=\"govuk-label\" for=\"select-3\">\n      Label text goes here\n    </label>\n    </h1>\n\n\n  <select class=\"govuk-select\" id=\"select-3\" name=\"select-3\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\" selected>GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\" disabled>GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group\">\n  <h1 class=\"govuk-label-wrapper\">\n    <label class=\"govuk-label\" for=\"select-3\">\n      Label text goes here\n    </label>\n    </h1>\n\n\n  <select class=\"govuk-select\" id=\"select-3\" name=\"select-3\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\" selected\n        >GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\" disabled\n        >GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
             "hidden": false
         },
         {
@@ -116,7 +446,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group\">\n  <label class=\"govuk-label\" for=\"select-1\">\n    Label text goes here\n  </label>\n\n\n  <select class=\"govuk-select govuk-!-width-full\" id=\"select-1\" name=\"select-1\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\" selected>GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\" disabled>GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group\">\n  <label class=\"govuk-label\" for=\"select-1\">\n    Label text goes here\n  </label>\n\n\n  <select class=\"govuk-select govuk-!-width-full\" id=\"select-1\" name=\"select-1\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\" selected\n        >GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\" disabled\n        >GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
             "hidden": false
         },
         {
@@ -148,7 +478,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group extra-class\">\n  <label class=\"govuk-label\" for=\"select-1\">\n    Label text goes here\n  </label>\n\n\n  <select class=\"govuk-select govuk-!-width-full\" id=\"select-1\" name=\"select-1\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\" selected>GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\" disabled>GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group extra-class\">\n  <label class=\"govuk-label\" for=\"select-1\">\n    Label text goes here\n  </label>\n\n\n  <select class=\"govuk-select govuk-!-width-full\" id=\"select-1\" name=\"select-1\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\" selected\n        >GOV.UK frontend option 2</option>\n    \n  \n    \n      <option value=\"3\" disabled\n        >GOV.UK frontend option 3</option>\n    \n  \n  </select>\n</div>",
             "hidden": false
         },
         {
@@ -168,7 +498,7 @@
                 ],
                 "describedBy": "some-id"
             },
-            "html": "<div class=\"govuk-form-group\">\n  \n\n\n  <select class=\"govuk-select\" id=\"with-describedby\" name=\"with-describedby\" aria-describedby=\"some-id\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\">GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group\">\n  \n\n\n  <select class=\"govuk-select\" id=\"with-describedby\" name=\"with-describedby\" aria-describedby=\"some-id\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\"\n        >GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
             "hidden": true
         },
         {
@@ -190,7 +520,7 @@
                     "data-attribute": "my data value"
                 }
             },
-            "html": "<div class=\"govuk-form-group\">\n  \n\n\n  <select class=\"govuk-select\" id=\"with-attributes\" name=\"with-attributes\" data-attribute=\"my data value\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\">GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group\">\n  \n\n\n  <select class=\"govuk-select\" id=\"with-attributes\" name=\"with-attributes\" data-attribute=\"my data value\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\"\n        >GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
             "hidden": true
         },
         {
@@ -218,7 +548,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group\">\n  \n\n\n  <select class=\"govuk-select\" id=\"with-item-attributes\" name=\"with-item-attributes\">\n  \n    \n      <option value=\"1\" data-attribute=\"ABC\" data-second-attribute=\"DEF\">Option 1</option>\n    \n  \n    \n      <option value=\"2\" data-attribute=\"GHI\" data-second-attribute=\"JKL\">Option 2</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group\">\n  \n\n\n  <select class=\"govuk-select\" id=\"with-item-attributes\" name=\"with-item-attributes\">\n  \n    \n      <option value=\"1\"\n         data-attribute=\"ABC\" data-second-attribute=\"DEF\">Option 1</option>\n    \n  \n    \n      <option value=\"2\"\n         data-attribute=\"GHI\" data-second-attribute=\"JKL\">Option 2</option>\n    \n  \n  </select>\n</div>",
             "hidden": true
         },
         {
@@ -240,7 +570,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group\">\n  \n\n\n  <select class=\"govuk-select\" id=\"with-falsey-values\" name=\"with-falsey-values\">\n  \n    \n      <option value=\"1\">Option 1</option>\n    \n  \n    \n  \n    \n  \n    \n  \n    \n      <option value=\"2\">Options 2</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group\">\n  \n\n\n  <select class=\"govuk-select\" id=\"with-falsey-values\" name=\"with-falsey-values\">\n  \n    \n      <option value=\"1\"\n        >Option 1</option>\n    \n  \n    \n  \n    \n  \n    \n  \n    \n      <option value=\"2\"\n        >Options 2</option>\n    \n  \n  </select>\n</div>",
             "hidden": true
         },
         {
@@ -275,7 +605,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group\">\n  \n\n  \n  \n  <div id=\"select-with-hint-hint\" class=\"govuk-hint\">\n    Hint text goes here\n  </div>\n\n\n  <select class=\"govuk-select\" id=\"select-with-hint\" name=\"select-with-hint\" aria-describedby=\"some-id select-with-hint-hint\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\">GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group\">\n  \n\n  \n  \n  <div id=\"select-with-hint-hint\" class=\"govuk-hint\">\n    Hint text goes here\n  </div>\n\n\n  <select class=\"govuk-select\" id=\"select-with-hint\" name=\"select-with-hint\" aria-describedby=\"some-id select-with-hint-hint\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\"\n        >GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
             "hidden": true
         },
         {
@@ -297,7 +627,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group govuk-form-group--error\">\n  \n\n\n  \n  \n  <span id=\"select-with-error-error\" class=\"govuk-error-message\">\n    <span class=\"govuk-visually-hidden\">Error:</span> Error message\n  </span>\n\n  <select class=\"govuk-select govuk-select--error\" id=\"select-with-error\" name=\"select-with-error\" aria-describedby=\"select-with-error-error\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\">GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group govuk-form-group--error\">\n  \n\n\n  \n  \n  <span id=\"select-with-error-error\" class=\"govuk-error-message\">\n    <span class=\"govuk-visually-hidden\">Error:</span> Error message\n  </span>\n\n  <select class=\"govuk-select govuk-select--error\" id=\"select-with-error\" name=\"select-with-error\" aria-describedby=\"select-with-error-error\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\"\n        >GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
             "hidden": true
         },
         {
@@ -320,7 +650,7 @@
                     }
                 ]
             },
-            "html": "<div class=\"govuk-form-group govuk-form-group--error\">\n  \n\n\n  \n  \n  <span id=\"select-with-error-error\" class=\"govuk-error-message\">\n    <span class=\"govuk-visually-hidden\">Error:</span> Error message\n  </span>\n\n  <select class=\"govuk-select govuk-select--error\" id=\"select-with-error\" name=\"select-with-error\" aria-describedby=\"some-id select-with-error-error\">\n  \n    \n      <option value=\"1\">GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\">GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
+            "html": "<div class=\"govuk-form-group govuk-form-group--error\">\n  \n\n\n  \n  \n  <span id=\"select-with-error-error\" class=\"govuk-error-message\">\n    <span class=\"govuk-visually-hidden\">Error:</span> Error message\n  </span>\n\n  <select class=\"govuk-select govuk-select--error\" id=\"select-with-error\" name=\"select-with-error\" aria-describedby=\"some-id select-with-error-error\">\n  \n    \n      <option value=\"1\"\n        >GOV.UK frontend option 1</option>\n    \n  \n    \n      <option value=\"2\"\n        >GOV.UK frontend option 2</option>\n    \n  \n  </select>\n</div>",
             "hidden": true
         }
     ]

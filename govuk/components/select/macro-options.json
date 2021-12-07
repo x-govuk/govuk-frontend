@@ -101,5 +101,11 @@
         "type": "object",
         "required": false,
         "description": "HTML attributes (for example data attributes) to add to the select."
+    },
+    {
+        "name": "noResults",
+        "type": "string",
+        "required": false,
+        "description": "A message to show when there are no matching results using the search feature"
     }
 ]
