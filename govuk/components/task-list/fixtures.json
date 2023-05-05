@@ -1,0 +1,287 @@
+{
+    "component": "task-list",
+    "fixtures": [
+        {
+            "name": "default",
+            "options": {
+                "idPrefix": "task-list-example",
+                "items": [
+                    {
+                        "title": {
+                            "text": "Company Directors"
+                        },
+                        "href": "#",
+                        "status": {
+                            "text": "Completed",
+                            "classes": "govuk-tag--black"
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Registered company details"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Incomplete",
+                                "classes": "govuk-tag--blue"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Business plan"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Incomplete",
+                                "classes": "govuk-tag--blue"
+                            }
+                        }
+                    }
+                ]
+            },
+            "hidden": false,
+            "html": "<ul class=\"govuk-task-list\">\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-1-status\">Company Directors</a>\n      </div>\n      <div class=\"govuk-task-list__status govuk-tag--black\" id=\"task-list-example-1-status\">\n          Completed\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-2-status\">Registered company details</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-2-status\">\n          <strong class=\"govuk-tag govuk-tag--blue\">\n      Incomplete\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-3-status\">Business plan</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-3-status\">\n          <strong class=\"govuk-tag govuk-tag--blue\">\n      Incomplete\n    </strong>\n      </div>\n    </li>\n</ul>"
+        },
+        {
+            "name": "example with 3 states",
+            "options": {
+                "idPrefix": "task-list-example",
+                "items": [
+                    {
+                        "title": {
+                            "text": "Company Directors"
+                        },
+                        "href": "#",
+                        "status": {
+                            "text": "Completed"
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Registered company details"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Not started",
+                                "classes": "govuk-tag--light-blue"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Business plan"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "In progress",
+                                "classes": "govuk-tag--blue"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Documentation"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Not started",
+                                "classes": "govuk-tag--light-blue"
+                            }
+                        }
+                    }
+                ]
+            },
+            "hidden": false,
+            "html": "<ul class=\"govuk-task-list\">\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-1-status\">Company Directors</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-1-status\">\n          Completed\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-2-status\">Registered company details</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-2-status\">\n          <strong class=\"govuk-tag govuk-tag--light-blue\">\n      Not started\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-3-status\">Business plan</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-3-status\">\n          <strong class=\"govuk-tag govuk-tag--blue\">\n      In progress\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-4-status\">Documentation</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-4-status\">\n          <strong class=\"govuk-tag govuk-tag--light-blue\">\n      Not started\n    </strong>\n      </div>\n    </li>\n</ul>"
+        },
+        {
+            "name": "example with hint text and additional states",
+            "options": {
+                "idPrefix": "task-list-example",
+                "items": [
+                    {
+                        "title": {
+                            "text": "Company Directors"
+                        },
+                        "href": "#",
+                        "status": {
+                            "text": "Completed"
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Registered company details"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Not started",
+                                "classes": "govuk-tag--light-blue"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Business plan"
+                        },
+                        "href": "#",
+                        "hint": {
+                            "text": "Ensure the plan covers objectives, strategies, sales, marketing and financial forecasts."
+                        },
+                        "status": {
+                            "tag": {
+                                "text": "Review",
+                                "classes": "govuk-tag--pink"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Documentation"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "In progress",
+                                "classes": "govuk-tag--blue"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Charitable status"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Error",
+                                "classes": "govuk-tag--red"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Payment"
+                        },
+                        "hint": {
+                            "text": "It will cost between £15 and £75"
+                        },
+                        "status": {
+                            "text": "Cannot start yet",
+                            "classes": "govuk-hint"
+                        }
+                    }
+                ]
+            },
+            "hidden": false,
+            "html": "<ul class=\"govuk-task-list\">\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-1-status\">Company Directors</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-1-status\">\n          Completed\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-2-status\">Registered company details</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-2-status\">\n          <strong class=\"govuk-tag govuk-tag--light-blue\">\n      Not started\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-3-hint task-list-example-3-status\">Business plan</a>\n          <div id=\"task-list-example-3-hint\" class=\"govuk-task-list__task_hint\">\n            Ensure the plan covers objectives, strategies, sales, marketing and financial forecasts.\n          </div>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-3-status\">\n          <strong class=\"govuk-tag govuk-tag--pink\">\n      Review\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-4-status\">Documentation</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-4-status\">\n          <strong class=\"govuk-tag govuk-tag--blue\">\n      In progress\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-5-status\">Charitable status</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-5-status\">\n          <strong class=\"govuk-tag govuk-tag--red\">\n      Error\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <div class=\"govuk-task-list__task-no-link\">Payment</div>\n          <div id=\"task-list-example-6-hint\" class=\"govuk-task-list__task_hint\">\n            It will cost between £15 and £75\n          </div>\n      </div>\n      <div class=\"govuk-task-list__status govuk-hint\" id=\"task-list-example-6-status\">\n          Cannot start yet\n      </div>\n    </li>\n</ul>"
+        },
+        {
+            "name": "example with all possible colours",
+            "options": {
+                "idPrefix": "task-list-example",
+                "items": [
+                    {
+                        "title": {
+                            "text": "Task A"
+                        },
+                        "href": "#",
+                        "status": {
+                            "text": "Text colour"
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Task B"
+                        },
+                        "href": "#",
+                        "status": {
+                            "text": "Secondary text colour",
+                            "classes": "govuk-hint"
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Task C"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Light blue",
+                                "classes": "govuk-tag--light-blue"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Task D"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Blue",
+                                "classes": "govuk-tag--blue"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Task E"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Grey",
+                                "classes": "govuk-tag--grey"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Task F"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Pink",
+                                "classes": "govuk-tag--pink"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Task G"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Purple",
+                                "classes": "govuk-tag--purple"
+                            }
+                        }
+                    },
+                    {
+                        "title": {
+                            "text": "Task H"
+                        },
+                        "href": "#",
+                        "status": {
+                            "tag": {
+                                "text": "Error",
+                                "classes": "govuk-tag--red"
+                            }
+                        }
+                    }
+                ]
+            },
+            "hidden": false,
+            "html": "<ul class=\"govuk-task-list\">\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-1-status\">Task A</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-1-status\">\n          Text colour\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-2-status\">Task B</a>\n      </div>\n      <div class=\"govuk-task-list__status govuk-hint\" id=\"task-list-example-2-status\">\n          Secondary text colour\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-3-status\">Task C</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-3-status\">\n          <strong class=\"govuk-tag govuk-tag--light-blue\">\n      Light blue\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-4-status\">Task D</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-4-status\">\n          <strong class=\"govuk-tag govuk-tag--blue\">\n      Blue\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-5-status\">Task E</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-5-status\">\n          <strong class=\"govuk-tag govuk-tag--grey\">\n      Grey\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-6-status\">Task F</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-6-status\">\n          <strong class=\"govuk-tag govuk-tag--pink\">\n      Pink\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-7-status\">Task G</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-7-status\">\n          <strong class=\"govuk-tag govuk-tag--purple\">\n      Purple\n    </strong>\n      </div>\n    </li>\n<li class=\"govuk-task-list__item govuk-task-list__item--with-link\">\n      <div class=\"govuk-task-list__task-name-and-hint\">\n          <a class=\"govuk-link govuk-task-list__link\" href=\"#\" aria-describedby=\"task-list-example-8-status\">Task H</a>\n      </div>\n      <div class=\"govuk-task-list__status \" id=\"task-list-example-8-status\">\n          <strong class=\"govuk-tag govuk-tag--red\">\n      Error\n    </strong>\n      </div>\n    </li>\n</ul>"
+        }
+    ]
+}

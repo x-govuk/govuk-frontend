@@ -1,7 +1,5 @@
 import './matches.mjs';
 
-// @ts-nocheck
-
 (function(undefined) {
 
   // Detection from https://raw.githubusercontent.com/Financial-Times/polyfill-service/1f3c09b402f65bf6e393f933a15ba63f1b86ef1f/packages/polyfill-library/polyfills/Element/prototype/closest/detect.js
@@ -17,6 +15,7 @@ import './matches.mjs';
 
     while (node) {
       if (node.matches(selector)) return node;
+      // @ts-expect-error Ignore mismatch between Element and ParentNode types
       else node = 'SVGElement' in window && node instanceof SVGElement ? node.parentNode : node.parentElement;
     }
 

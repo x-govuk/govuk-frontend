@@ -9,9 +9,16 @@
 	 * It doesn't need to be updated manually.
 	 */
 
+	/**
+	 * GOV.UK Frontend release version
+	 *
+	 * {@link https://github.com/alphagov/govuk-frontend/releases}
+	 */
 	var version = '4.6.0';
 
 	exports.version = version;
+
+	Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 //# sourceMappingURL=govuk-frontend-version.js.map

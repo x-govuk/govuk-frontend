@@ -1,8 +1,3 @@
-import '../../vendor/polyfills/Event.mjs';
-import '../../vendor/polyfills/Function/prototype/bind.mjs';
-
-/* eslint-disable es-x/no-function-prototype-bind -- Polyfill imported */
-
 /**
  * Header component
  *
@@ -71,7 +66,9 @@ Header.prototype.init = function () {
       // addListener is a deprecated function, however addEventListener
       // isn't supported by IE or Safari < 14. We therefore add this in as
       // a fallback for those browsers
+
       // @ts-expect-error Property 'addListener' does not exist
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       this.mql.addListener(this.syncState.bind(this));
     }
 

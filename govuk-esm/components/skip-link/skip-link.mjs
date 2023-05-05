@@ -1,8 +1,4 @@
 import '../../vendor/polyfills/Element/prototype/classList.mjs';
-import '../../vendor/polyfills/Event.mjs';
-import '../../vendor/polyfills/Function/prototype/bind.mjs';
-
-/* eslint-disable es-x/no-function-prototype-bind -- Polyfill imported */
 
 /**
  * Skip link component
