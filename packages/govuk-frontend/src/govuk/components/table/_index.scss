@@ -19,7 +19,7 @@
     }
   }
 
-  .govuk-table__header {
+  .#{$brand}-table__header {
     @include govuk-typography-weight-bold;
   }
 
