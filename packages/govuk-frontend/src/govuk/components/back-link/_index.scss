@@ -12,7 +12,7 @@
   // Colour of chevron
   $chevron-border-colour: $govuk-secondary-text-colour;
 
-  .govuk-back-link {
+  .#{$brand}-back-link {
     @include govuk-font-size($size: $font-size);
     @include govuk-link-common;
     @include govuk-link-style-text;
@@ -28,7 +28,7 @@
   }
 
   // Prepend left pointing chevron
-  .govuk-back-link::before {
+  .#{$brand}-back-link::before {
     content: "";
     display: block;
 
@@ -58,11 +58,11 @@
     }
   }
 
-  .govuk-back-link:focus::before {
+  .#{$brand}-back-link:focus::before {
     border-color: $govuk-focus-text-colour;
   }
 
-  .govuk-back-link::after {
+  .#{$brand}-back-link::after {
     content: "";
     position: absolute;
     top: -14px;
@@ -71,7 +71,7 @@
     left: 0;
   }
 
-  .govuk-back-link--inverse {
+  .#{$brand}-back-link--inverse {
     @include govuk-link-style-inverse;
 
     &::before {

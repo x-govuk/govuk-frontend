@@ -18,7 +18,7 @@
   // √(8² + 8²) * 0.5 ≅ 5.655
   $chevron-altitude-calculated: govuk-em(5.655px, $font-size);
 
-  .govuk-breadcrumbs {
+  .#{$brand}-breadcrumbs {
     @include govuk-font($size: $font-size);
     @include govuk-text-colour;
 
@@ -26,7 +26,7 @@
     margin-bottom: govuk-spacing(2);
   }
 
-  .govuk-breadcrumbs__list {
+  .#{$brand}-breadcrumbs__list {
     @include govuk-clearfix;
 
     margin: 0;
@@ -34,7 +34,7 @@
     list-style-type: none;
   }
 
-  .govuk-breadcrumbs__list-item {
+  .#{$brand}-breadcrumbs__list-item {
     display: inline-block;
     position: relative;
 
@@ -91,14 +91,14 @@
     }
   }
 
-  .govuk-breadcrumbs__link {
+  .#{$brand}-breadcrumbs__link {
     @include govuk-link-common;
     @include govuk-link-style-text;
   }
 
-  .govuk-breadcrumbs--collapse-on-mobile {
+  .#{$brand}-breadcrumbs--collapse-on-mobile {
     @include govuk-media-query($until: tablet) {
-      .govuk-breadcrumbs__list-item {
+      .#{$brand}-breadcrumbs__list-item {
         display: none;
 
         &:first-child,
@@ -112,20 +112,20 @@
         }
       }
 
-      .govuk-breadcrumbs__list {
+      .#{$brand}-breadcrumbs__list {
         display: flex;
       }
     }
   }
 
-  .govuk-breadcrumbs--inverse {
+  .#{$brand}-breadcrumbs--inverse {
     color: govuk-colour("white");
 
-    .govuk-breadcrumbs__link {
+    .#{$brand}-breadcrumbs__link {
       @include govuk-link-style-inverse;
     }
 
-    .govuk-breadcrumbs__list-item::before {
+    .#{$brand}-breadcrumbs__list-item::before {
       border-color: currentcolor;
     }
   }

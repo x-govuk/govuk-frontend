@@ -1,10 +1,10 @@
 // stylelint-disable declaration-no-important
 @include govuk-exports("govuk/overrides/width") {
-  .govuk-\!-width-full {
+  .#{$brand}-\!-width-full {
     width: 100% !important;
   }
 
-  .govuk-\!-width-three-quarters {
+  .#{$brand}-\!-width-three-quarters {
     width: 100% !important;
 
     @include govuk-media-query($from: tablet) {
@@ -12,7 +12,7 @@
     }
   }
 
-  .govuk-\!-width-two-thirds {
+  .#{$brand}-\!-width-two-thirds {
     width: 100% !important;
 
     @include govuk-media-query($from: tablet) {
@@ -20,7 +20,7 @@
     }
   }
 
-  .govuk-\!-width-one-half {
+  .#{$brand}-\!-width-one-half {
     width: 100% !important;
 
     @include govuk-media-query($from: tablet) {
@@ -28,7 +28,7 @@
     }
   }
 
-  .govuk-\!-width-one-third {
+  .#{$brand}-\!-width-one-third {
     width: 100% !important;
 
     @include govuk-media-query($from: tablet) {
@@ -36,7 +36,7 @@
     }
   }
 
-  .govuk-\!-width-one-quarter {
+  .#{$brand}-\!-width-one-quarter {
     width: 100% !important;
 
     @include govuk-media-query($from: tablet) {

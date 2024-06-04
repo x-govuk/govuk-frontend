@@ -3,7 +3,7 @@
 @import "../label/index";
 
 @include govuk-exports("govuk/component/input") {
-  .govuk-input {
+  .#{$brand}-input {
     @include govuk-font($size: 19);
 
     box-sizing: border-box;
@@ -38,17 +38,17 @@
     }
   }
 
-  .govuk-input::-webkit-outer-spin-button,
-  .govuk-input::-webkit-inner-spin-button {
+  .#{$brand}-input::-webkit-outer-spin-button,
+  .#{$brand}-input::-webkit-inner-spin-button {
     margin: 0;
     -webkit-appearance: none;
   }
 
-  .govuk-input[type="number"] {
+  .#{$brand}-input[type="number"] {
     -moz-appearance: textfield;
   }
 
-  .govuk-input--error {
+  .#{$brand}-input--error {
     border-color: $govuk-error-colour;
 
     &:focus {
@@ -56,7 +56,7 @@
     }
   }
 
-  .govuk-input--extra-letter-spacing {
+  .#{$brand}-input--extra-letter-spacing {
     @include govuk-font-tabular-numbers;
     letter-spacing: 0.05em;
   }
@@ -64,42 +64,42 @@
   // em measurements are based on the point size of the typeface
   // Extra space is added on the right hand side to allow for the Safari prefill icon
 
-  .govuk-input--width-30 {
+  .#{$brand}-input--width-30 {
     max-width: 29.5em;
   }
 
-  .govuk-input--width-20 {
+  .#{$brand}-input--width-20 {
     max-width: 20.5em;
   }
 
-  .govuk-input--width-10 {
+  .#{$brand}-input--width-10 {
     max-width: 11.5em;
   }
 
-  .govuk-input--width-5 {
+  .#{$brand}-input--width-5 {
     max-width: 5.5em;
   }
 
-  .govuk-input--width-4 {
+  .#{$brand}-input--width-4 {
     max-width: 4.5em;
   }
 
-  .govuk-input--width-3 {
+  .#{$brand}-input--width-3 {
     max-width: 3.75em;
   }
 
-  .govuk-input--width-2 {
+  .#{$brand}-input--width-2 {
     max-width: 2.75em;
   }
 
-  .govuk-input__wrapper {
+  .#{$brand}-input__wrapper {
     display: flex;
 
-    .govuk-input {
+    .#{$brand}-input {
       flex: 0 1 auto;
     }
 
-    .govuk-input:focus {
+    .#{$brand}-input:focus {
       // Hack to stop focus style being overlapped by the suffix
       z-index: 1;
     }
@@ -108,15 +108,15 @@
     @include govuk-media-query($until: mobile) {
       display: block;
 
-      .govuk-input {
+      .#{$brand}-input {
         // Set max-width to override potential width override class on the input
         max-width: 100%;
       }
     }
   }
 
-  .govuk-input__prefix,
-  .govuk-input__suffix {
+  .#{$brand}-input__prefix,
+  .#{$brand}-input__suffix {
     @include govuk-font($size: 19);
     box-sizing: border-box;
     // Use flexbox to align text within the prefix and suffix
@@ -141,7 +141,7 @@
     }
   }
 
-  .govuk-input__prefix {
+  .#{$brand}-input__prefix {
     @include govuk-media-query($until: mobile) {
       border-bottom: 0;
     }
@@ -151,7 +151,7 @@
   }
 
   // Split prefix/suffix onto separate lines on narrow screens
-  .govuk-input__suffix {
+  .#{$brand}-input__suffix {
     @include govuk-media-query($until: mobile) {
       border-top: 0;
     }

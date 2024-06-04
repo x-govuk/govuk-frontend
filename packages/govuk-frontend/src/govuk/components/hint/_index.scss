@@ -1,5 +1,5 @@
 @include govuk-exports("govuk/component/hint") {
-  .govuk-hint {
+  .#{$brand}-hint {
     @include govuk-font($size: 19);
 
     margin-bottom: govuk-spacing(3);
@@ -17,7 +17,7 @@
   // This adjustment will not work in browsers that do not support :not().
   // Users with these browsers will see the default size margin (5px larger).
 
-  .govuk-label:not(.govuk-label--m):not(.govuk-label--l):not(.govuk-label--xl) + .govuk-hint {
+  .#{$brand}-label:not(.#{$brand}-label--m):not(.#{$brand}-label--l):not(.#{$brand}-label--xl) + .#{$brand}-hint {
     margin-bottom: govuk-spacing(2);
   }
 
@@ -32,12 +32,12 @@
   // Users with these browsers will see the default size margin (5px larger).
 
   // prettier-ignore
-  .govuk-fieldset__legend:not(.govuk-fieldset__legend--m):not(.govuk-fieldset__legend--l):not(.govuk-fieldset__legend--xl) + .govuk-hint {
+  .#{$brand}-fieldset__legend:not(.#{$brand}-fieldset__legend--m):not(.#{$brand}-fieldset__legend--l):not(.#{$brand}-fieldset__legend--xl) + .#{$brand}-hint {
     margin-bottom: govuk-spacing(2);
   }
 
   // Reduces visual spacing of legend when there is a hint
-  .govuk-fieldset__legend + .govuk-hint {
+  .#{$brand}-fieldset__legend + .#{$brand}-hint {
     margin-top: govuk-spacing(-1);
   }
 }

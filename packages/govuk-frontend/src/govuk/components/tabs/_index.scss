@@ -1,11 +1,11 @@
 @include govuk-exports("govuk/component/tabs") {
-  .govuk-tabs {
+  .#{$brand}-tabs {
     @include govuk-responsive-margin(1, "top");
     @include govuk-responsive-margin(6, "bottom");
     @include govuk-font($size: 19);
   }
 
-  .govuk-tabs__title {
+  .#{$brand}-tabs__title {
     // Set the size and weight again because this element is a heading and the
     // user agent font size overrides the inherited font size
     @include govuk-font-size($size: 19);
@@ -14,14 +14,14 @@
     margin-bottom: govuk-spacing(2);
   }
 
-  .govuk-tabs__list {
+  .#{$brand}-tabs__list {
     margin: 0;
     padding: 0;
     list-style: none;
     @include govuk-responsive-margin(6, "bottom");
   }
 
-  .govuk-tabs__list-item {
+  .#{$brand}-tabs__list-item {
     margin-left: govuk-spacing(5);
 
     &::before {
@@ -32,7 +32,7 @@
     }
   }
 
-  .govuk-tabs__tab {
+  .#{$brand}-tabs__tab {
     @include govuk-link-common;
     @include govuk-link-style-default;
 
@@ -40,24 +40,24 @@
     margin-bottom: govuk-spacing(2);
   }
 
-  .govuk-tabs__panel {
+  .#{$brand}-tabs__panel {
     @include govuk-responsive-margin(8, "bottom");
   }
 
   // GOV.UK Frontend JavaScript enabled
-  .govuk-frontend-supported {
+  .#{$brand}-frontend-supported {
     @include govuk-media-query($from: tablet) {
-      .govuk-tabs__list {
+      .#{$brand}-tabs__list {
         @include govuk-clearfix;
         margin-bottom: 0;
         border-bottom: 1px solid $govuk-border-colour;
       }
 
-      .govuk-tabs__title {
+      .#{$brand}-tabs__title {
         display: none;
       }
 
-      .govuk-tabs__list-item {
+      .#{$brand}-tabs__list-item {
         position: relative;
 
         margin-right: govuk-spacing(1);
@@ -74,7 +74,7 @@
         }
       }
 
-      .govuk-tabs__list-item--selected {
+      .#{$brand}-tabs__list-item--selected {
         $border-width: 1px;
 
         position: relative;
@@ -93,12 +93,12 @@
 
         background-color: $govuk-body-background-colour;
 
-        .govuk-tabs__tab {
+        .#{$brand}-tabs__tab {
           text-decoration: none;
         }
       }
 
-      .govuk-tabs__tab {
+      .#{$brand}-tabs__tab {
         @include govuk-link-style-text;
 
         margin-bottom: 0;
@@ -113,7 +113,7 @@
         }
       }
 
-      .govuk-tabs__panel {
+      .#{$brand}-tabs__panel {
         @include govuk-responsive-margin(0, "bottom");
         padding: govuk-spacing(6) govuk-spacing(4);
         border: 1px solid $govuk-border-colour;
@@ -124,7 +124,7 @@
         }
       }
 
-      .govuk-tabs__panel--hidden {
+      .#{$brand}-tabs__panel--hidden {
         display: none;
       }
     }

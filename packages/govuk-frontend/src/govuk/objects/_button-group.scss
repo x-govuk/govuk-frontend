@@ -9,7 +9,7 @@
   //   centre-aligned on mobile
   // - spacing between the buttons and links is handled automatically, including
   //   when they wrap across multiple lines
-  .govuk-button-group {
+  .#{$brand}-button-group {
     $horizontal-gap: govuk-spacing(3);
     $vertical-gap: govuk-spacing(3);
 
@@ -38,7 +38,7 @@
     //
     // Because we want the focus state to be tight around the link text, we use
     // margins where the buttons would use padding.
-    .govuk-link {
+    .#{$brand}-link {
       @include govuk-font($size: 19, $line-height: 19px);
       display: inline-block;
       // Prevent links overflowing their container in IE10/11 because of bug
@@ -51,7 +51,7 @@
 
     // Reduce the bottom margin to the size of the vertical gap (accommodating
     // the button shadow) – the 'lost' margin is moved to the button-group.
-    .govuk-button {
+    .#{$brand}-button {
       margin-bottom: $vertical-gap + $button-shadow-size;
     }
 
@@ -65,12 +65,12 @@
       flex-wrap: wrap;
       align-items: baseline;
 
-      .govuk-button,
-      .govuk-link {
+      .#{$brand}-button,
+      .#{$brand}-link {
         margin-right: $horizontal-gap;
       }
 
-      .govuk-link {
+      .#{$brand}-link {
         text-align: left;
       }
     }

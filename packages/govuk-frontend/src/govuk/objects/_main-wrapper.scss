@@ -22,7 +22,7 @@
 // </div>
 
 @include govuk-exports("govuk/objects/main-wrapper") {
-  .govuk-main-wrapper {
+  .#{$brand}-main-wrapper {
     // In IE11 the `main` element can be used, but is not recognized  –
     // meaning it's not defined in IE's default style sheet,
     // so it uses CSS initial value, which is inline.
@@ -39,15 +39,15 @@
     }
   }
 
-  // Using the `.govuk-main-wrapper--auto-spacing` modifier should apply the
+  // Using the `.#{$brand}-main-wrapper--auto-spacing` modifier should apply the
   // correct spacing depending on whether there are any elements
   // (such the back link, breadcrumbs or phase banner components) before the
-  // `.govuk-main-wrapper` in the `govuk-width-container`.
+  // `.#{$brand}-main-wrapper` in the `govuk-width-container`.
   //
   // If you need to control the spacing manually, use the
   // `govuk-main-wrapper--l` modifier instead.
-  .govuk-main-wrapper--auto-spacing:first-child,
-  .govuk-main-wrapper--l {
+  .#{$brand}-main-wrapper--auto-spacing:first-child,
+  .#{$brand}-main-wrapper--l {
     @include govuk-responsive-padding(8, "top");
   }
 }

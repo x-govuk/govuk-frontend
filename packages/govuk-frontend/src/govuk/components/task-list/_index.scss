@@ -3,7 +3,7 @@
 @include govuk-exports("govuk/component/task-list") {
   $govuk-task-list-hover-colour: govuk-colour("light-grey");
 
-  .govuk-task-list {
+  .#{$brand}-task-list {
     @include govuk-font($size: 19);
     margin-top: 0;
     @include govuk-responsive-margin(6, "bottom");
@@ -16,7 +16,7 @@
   //
   // The position is set to 'relative' so than an absolutely-positioned transparent element box
   // can be added within the link so that the whole row can be clickable.
-  .govuk-task-list__item {
+  .#{$brand}-task-list__item {
     display: table;
     position: relative;
     width: 100%;
@@ -26,24 +26,24 @@
     border-bottom: 1px solid $govuk-border-colour;
   }
 
-  .govuk-task-list__item:first-child {
+  .#{$brand}-task-list__item:first-child {
     border-top: 1px solid $govuk-border-colour;
   }
 
   // This class is added to the <li> elements where the task name is a link.
   // The background hover colour is added to help indicate that the whole row is clickable, rather
   // than just the visible link text.
-  .govuk-task-list__item--with-link:hover {
+  .#{$brand}-task-list__item--with-link:hover {
     background: $govuk-task-list-hover-colour;
   }
 
-  .govuk-task-list__name-and-hint {
+  .#{$brand}-task-list__name-and-hint {
     display: table-cell;
     vertical-align: top;
     @include govuk-text-colour;
   }
 
-  .govuk-task-list__status {
+  .#{$brand}-task-list__status {
     display: table-cell;
     padding-left: govuk-spacing(2);
     text-align: right;
@@ -51,14 +51,14 @@
     @include govuk-text-colour;
   }
 
-  .govuk-task-list__status--cannot-start-yet {
+  .#{$brand}-task-list__status--cannot-start-yet {
     color: $govuk-secondary-text-colour;
   }
 
   // This adds an empty transparent box covering the whole row, including the task status and
   // any hint text. Because this is generated within the link element, this allows the whole area
   // to be clickable.
-  .govuk-task-list__link::after {
+  .#{$brand}-task-list__link::after {
     content: "";
     display: block;
     position: absolute;
@@ -68,7 +68,7 @@
     left: 0;
   }
 
-  .govuk-task-list__hint {
+  .#{$brand}-task-list__hint {
     margin-top: govuk-spacing(1);
     color: $govuk-secondary-text-colour;
   }

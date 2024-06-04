@@ -5,36 +5,36 @@
     @include govuk-link-print-friendly;
   }
 
-  .govuk-link {
+  .#{$brand}-link {
     @extend %govuk-link;
   }
 
-  // Variant classes should always be used in conjunction with the .govuk-link
+  // Variant classes should always be used in conjunction with the .#{$brand}-link
   // class, so we do not need the common link styles as they will be inherited.
 
-  .govuk-link--muted {
+  .#{$brand}-link--muted {
     @include govuk-link-style-muted;
   }
 
-  .govuk-link--text-colour {
+  .#{$brand}-link--text-colour {
     @include govuk-link-style-text;
   }
 
-  .govuk-link--inverse {
+  .#{$brand}-link--inverse {
     @include govuk-link-style-inverse;
   }
 
-  .govuk-link--no-underline {
+  .#{$brand}-link--no-underline {
     @include govuk-link-style-no-underline;
   }
 
-  .govuk-link--no-visited-state {
+  .#{$brand}-link--no-visited-state {
     @include govuk-link-style-no-visited-state;
   }
 
   // Links that only contain images
 
-  .govuk-link-image {
+  .#{$brand}-link-image {
     @include govuk-link-image;
   }
 }

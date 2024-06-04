@@ -32,17 +32,17 @@
 /// @param {String} $at [tablet] - mobile | tablet | desktop | any custom breakpoint
 ///
 /// @example scss - Default
-///   .govuk-grid-column-two-thirds {
+///   .#{$brand}-grid-column-two-thirds {
 ///     @include govuk-grid-column(two-thirds)
 ///   }
 ///
 /// @example scss - Customising the breakpoint where width percentage is applied
-///   .govuk-grid-column-one-half-at-desktop {
+///   .#{$brand}-grid-column-one-half-at-desktop {
 ///     @include govuk-grid-column(one-half, $at: desktop);
 ///   }
 ///
 /// @example scss - Customising the float direction
-///   .govuk-grid-column-one-half-right {
+///   .#{$brand}-grid-column-one-half-right {
 ///     @include govuk-grid-column(two-thirds, $float: right);
 ///   }
 ///

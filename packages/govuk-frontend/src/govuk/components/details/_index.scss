@@ -1,5 +1,5 @@
 @include govuk-exports("govuk/component/details") {
-  .govuk-details {
+  .#{$brand}-details {
     @include govuk-font($size: 19);
     @include govuk-text-colour;
     @include govuk-responsive-margin(6, "bottom");
@@ -7,14 +7,14 @@
     display: block;
   }
 
-  .govuk-details__summary {
+  .#{$brand}-details__summary {
     // Make the focus outline shrink-wrap the text content of the summary
     display: inline-block;
 
     margin-bottom: govuk-spacing(1);
   }
 
-  .govuk-details__summary-text {
+  .#{$brand}-details__summary-text {
     > :first-child {
       margin-top: 0;
     }
@@ -25,18 +25,18 @@
     }
   }
 
-  .govuk-details__text {
+  .#{$brand}-details__text {
     padding-top: govuk-spacing(3);
     padding-bottom: govuk-spacing(3);
     padding-left: govuk-spacing(4);
   }
 
-  .govuk-details__text p {
+  .#{$brand}-details__text p {
     margin-top: 0;
     margin-bottom: govuk-spacing(4);
   }
 
-  .govuk-details__text > :last-child {
+  .#{$brand}-details__text > :last-child {
     margin-bottom: 0;
   }
 
@@ -44,15 +44,15 @@
   // These browsers don't support the details element, so fall back to looking
   // like inset text
   @media screen\0 {
-    .govuk-details {
+    .#{$brand}-details {
       border-left: $govuk-border-width-wide solid $govuk-border-colour;
     }
 
-    .govuk-details__summary {
+    .#{$brand}-details__summary {
       margin-top: govuk-spacing(3);
     }
 
-    .govuk-details__summary-text {
+    .#{$brand}-details__summary-text {
       @include govuk-typography-weight-bold;
       @include govuk-responsive-margin(4, "bottom");
       padding-left: govuk-spacing(4);
@@ -68,7 +68,7 @@
   //   - support ES6 modules but not the <details> element (Edge 16 - 18)
   //   - do not support ES6 modules or the <details> element (eg, IE8+)
   @supports not (-ms-ime-align: auto) {
-    .govuk-details__summary {
+    .#{$brand}-details__summary {
       // Absolutely position the marker against this element
       position: relative;
 
@@ -88,27 +88,27 @@
       }
     }
     // ...but only underline the text, not the arrow
-    .govuk-details__summary-text {
+    .#{$brand}-details__summary-text {
       @include govuk-link-decoration;
     }
 
-    .govuk-details__summary:hover .govuk-details__summary-text {
+    .#{$brand}-details__summary:hover .#{$brand}-details__summary-text {
       @include govuk-link-hover-decoration;
     }
 
     // Remove the underline when focussed to avoid duplicate borders
-    .govuk-details__summary:focus .govuk-details__summary-text {
+    .#{$brand}-details__summary:focus .#{$brand}-details__summary-text {
       text-decoration: none;
     }
 
     // Remove the default details marker so we can style our own consistently and
     // ensure it displays in Firefox (see implementation.md for details)
-    .govuk-details__summary::-webkit-details-marker {
+    .#{$brand}-details__summary::-webkit-details-marker {
       display: none;
     }
 
     // Append our own open / closed marker using a pseudo-element
-    .govuk-details__summary::before {
+    .#{$brand}-details__summary::before {
       content: "";
       position: absolute;
 
@@ -120,12 +120,12 @@
 
       @include govuk-shape-arrow($direction: right, $base: 14px);
 
-      .govuk-details[open] > & {
+      .#{$brand}-details[open] > & {
         @include govuk-shape-arrow($direction: down, $base: 14px);
       }
     }
 
-    .govuk-details__text {
+    .#{$brand}-details__text {
       border-left: $govuk-border-width solid $govuk-border-colour;
     }
   }

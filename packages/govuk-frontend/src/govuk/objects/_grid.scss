@@ -1,14 +1,14 @@
 @import "../base";
 
 @include govuk-exports("govuk/objects/grid") {
-  .govuk-grid-row {
+  .#{$brand}-grid-row {
     @include govuk-clearfix;
     margin-right: -($govuk-gutter-half);
     margin-left: -($govuk-gutter-half);
   }
 
   @each $width in map-keys($govuk-grid-widths) {
-    .govuk-grid-column-#{$width} {
+    .#{$brand}-grid-column-#{$width} {
       @include govuk-grid-column($width);
     }
   }
@@ -17,7 +17,7 @@
   // specificity as the non-breakpoint specific classes, so need to appear after
   // them in the outputted CSS
   @each $width in map-keys($govuk-grid-widths) {
-    .govuk-grid-column-#{$width}-from-desktop {
+    .#{$brand}-grid-column-#{$width}-from-desktop {
       @include govuk-grid-column($width, $at: desktop);
     }
   }

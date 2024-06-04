@@ -1,5 +1,5 @@
 @include govuk-exports("govuk/component/label") {
-  .govuk-label {
+  .#{$brand}-label {
     @include govuk-font($size: 19);
     @include govuk-text-colour;
 
@@ -9,26 +9,26 @@
   }
 
   // Modifiers that make labels look more like their equivalent headings
-  .govuk-label--xl,
-  .govuk-label--l,
-  .govuk-label--m {
+  .#{$brand}-label--xl,
+  .#{$brand}-label--l,
+  .#{$brand}-label--m {
     @include govuk-typography-weight-bold;
     margin-bottom: govuk-spacing(3);
   }
 
-  .govuk-label--xl {
+  .#{$brand}-label--xl {
     @include govuk-font-size($size: 48);
   }
 
-  .govuk-label--l {
+  .#{$brand}-label--l {
     @include govuk-font-size($size: 36);
   }
 
-  .govuk-label--m {
+  .#{$brand}-label--m {
     @include govuk-font-size($size: 24);
   }
 
-  .govuk-label--s {
+  .#{$brand}-label--s {
     @include govuk-typography-weight-bold;
   }
 
@@ -38,7 +38,7 @@
   //
   // This breaks BEM conventions because it exists as a parent of the 'block',
   // so we can't really consider an element.
-  .govuk-label-wrapper {
+  .#{$brand}-label-wrapper {
     margin: 0;
   }
 }

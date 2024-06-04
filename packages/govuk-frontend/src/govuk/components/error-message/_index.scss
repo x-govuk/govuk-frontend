@@ -1,5 +1,5 @@
 @include govuk-exports("govuk/component/error-message") {
-  .govuk-error-message {
+  .#{$brand}-error-message {
     @include govuk-font($size: 19, $weight: bold);
 
     display: block;

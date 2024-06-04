@@ -11,7 +11,7 @@
     @include govuk-responsive-margin(8, "bottom");
   }
 
-  .govuk-heading-xl {
+  .#{$brand}-heading-xl {
     @extend %govuk-heading-xl;
   }
 
@@ -25,7 +25,7 @@
     @include govuk-responsive-margin(6, "bottom");
   }
 
-  .govuk-heading-l {
+  .#{$brand}-heading-l {
     @extend %govuk-heading-l;
   }
 
@@ -39,7 +39,7 @@
     @include govuk-responsive-margin(4, "bottom");
   }
 
-  .govuk-heading-m {
+  .#{$brand}-heading-m {
     @extend %govuk-heading-m;
   }
 
@@ -53,13 +53,13 @@
     @include govuk-responsive-margin(4, "bottom");
   }
 
-  .govuk-heading-s {
+  .#{$brand}-heading-s {
     @extend %govuk-heading-s;
   }
 
   // Captions to be used inside headings
 
-  .govuk-caption-xl {
+  .#{$brand}-caption-xl {
     @include govuk-font($size: 27);
 
     display: block;
@@ -69,7 +69,7 @@
     color: $govuk-secondary-text-colour;
   }
 
-  .govuk-caption-l {
+  .#{$brand}-caption-l {
     @include govuk-font($size: 24);
 
     display: block;
@@ -82,7 +82,7 @@
     }
   }
 
-  .govuk-caption-m {
+  .#{$brand}-caption-m {
     @include govuk-font($size: 19);
 
     display: block;
@@ -100,7 +100,7 @@
     @include govuk-responsive-margin(6, "bottom");
   }
 
-  .govuk-body-l {
+  .#{$brand}-body-l {
     @extend %govuk-body-l;
   }
 
@@ -112,7 +112,7 @@
     @include govuk-responsive-margin(4, "bottom");
   }
 
-  .govuk-body-m {
+  .#{$brand}-body-m {
     @extend %govuk-body-m;
   }
 
@@ -124,7 +124,7 @@
     @include govuk-responsive-margin(4, "bottom");
   }
 
-  .govuk-body-s {
+  .#{$brand}-body-s {
     @extend %govuk-body-s;
   }
 
@@ -138,7 +138,7 @@
   }
 
   // @deprecated
-  .govuk-body-xs {
+  .#{$brand}-body-xs {
     @extend %govuk-body-xs;
   }
 
@@ -147,11 +147,11 @@
   // Using extend to alias means we also inherit any contextual adjustments that
   // refer to the 'original' class name
 
-  .govuk-body-lead {
+  .#{$brand}-body-lead {
     @extend %govuk-body-l;
   }
 
-  .govuk-body {
+  .#{$brand}-body {
     @extend %govuk-body-m;
   }
 

@@ -69,7 +69,7 @@
 }
 
 @include govuk-exports("govuk/objects/width-container") {
-  .govuk-width-container {
+  .#{$brand}-width-container {
     @include govuk-width-container;
   }
 }

@@ -65,7 +65,7 @@
 /// `govuk-link-common` mixin to get the correct focus and hover states.
 ///
 /// @example scss
-///   .govuk-component__link {
+///   .#{$brand}-component__link {
 ///     @include govuk-link-common;
 ///     @include govuk-link-style-default;
 ///   }
@@ -105,7 +105,7 @@
 /// `govuk-link-common` mixin to get the correct focus and hover states.
 ///
 /// @example scss
-///   .govuk-component__link {
+///   .#{$brand}-component__link {
 ///     @include govuk-link-common;
 ///     @include govuk-link-style-error;
 ///   }
@@ -142,7 +142,7 @@
 /// `govuk-link-common` mixin to get the correct focus and hover states.
 ///
 /// @example scss
-///   .govuk-component__link {
+///   .#{$brand}-component__link {
 ///     @include govuk-link-common;
 ///     @include govuk-link-style-success;
 ///   }
@@ -179,7 +179,7 @@
 /// `govuk-link-common` mixin to get the correct focus and hover states.
 ///
 /// @example scss
-///   .govuk-component__link {
+///   .#{$brand}-component__link {
 ///     @include govuk-link-common;
 ///     @include govuk-link-style-muted;
 ///   }
@@ -213,7 +213,7 @@
 /// `govuk-link-common` mixin to get the correct focus and hover states.
 ///
 /// @example scss
-///   .govuk-component__link {
+///   .#{$brand}-component__link {
 ///     @include govuk-link-common;
 ///     @include govuk-link-style-text;
 ///   }
@@ -249,7 +249,7 @@
 /// `govuk-link-common` mixin to get the correct focus and hover states.
 ///
 /// @example scss
-///   .govuk-component__link {
+///   .#{$brand}-component__link {
 ///     @include govuk-link-common;
 ///     @include govuk-link-style-inverse;
 ///   }
@@ -287,7 +287,7 @@
 /// `govuk-link-common` mixin to get the correct focus and hover states.
 ///
 /// @example scss
-///   .govuk-component__link {
+///   .#{$brand}-component__link {
 ///     @include govuk-link-common;
 ///     @include govuk-link-style-no-visited-state;
 ///   }
@@ -324,7 +324,7 @@
 /// their cursor over it.
 ///
 /// @example scss
-///   .govuk-component__link {
+///   .#{$brand}-component__link {
 ///     @include govuk-link-common;
 ///     @include govuk-link-style-default;
 ///     @include govuk-link-style-no-underline;

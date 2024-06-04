@@ -13,7 +13,7 @@
   $govuk-header-menu-button-height: 24px;
   $govuk-header-menu-button-width: 80px;
 
-  .govuk-header {
+  .#{$brand}-header {
     @include govuk-font($size: 16, $line-height: 1);
 
     border-bottom: govuk-spacing(2) solid govuk-colour("white");
@@ -21,16 +21,16 @@
     background: $govuk-header-background;
   }
 
-  .govuk-header__container--full-width {
+  .#{$brand}-header__container--full-width {
     padding: 0 govuk-spacing(3);
     border-color: $govuk-header-border-color;
 
-    .govuk-header__menu-button {
+    .#{$brand}-header__menu-button {
       right: govuk-spacing(3);
     }
   }
 
-  .govuk-header__container {
+  .#{$brand}-header__container {
     @include govuk-clearfix;
     position: relative;
     margin-bottom: -$govuk-header-border-width;
@@ -38,7 +38,7 @@
     border-bottom: $govuk-header-border-width solid $govuk-header-border-color;
   }
 
-  .govuk-header__logotype {
+  .#{$brand}-header__logotype {
     display: inline-block;
     position: relative;
     top: -3px;
@@ -63,7 +63,7 @@
     }
   }
 
-  .govuk-header__product-name {
+  .#{$brand}-header__product-name {
     $product-name-offset: if($govuk-new-typography-scale, 7px, 10px);
     $product-name-offset-tablet: 5px;
 
@@ -91,7 +91,7 @@
     }
   }
 
-  .govuk-header__link {
+  .#{$brand}-header__link {
     // Avoid using the `govuk-link-common` mixin because the links in the header
     // get a special treatment, because:
     //
@@ -117,7 +117,7 @@
     }
   }
 
-  .govuk-header__link--homepage {
+  .#{$brand}-header__link--homepage {
     // Font size needs to be set on the link so that the box sizing is correct
     // in Firefox
     display: inline-block;
@@ -153,19 +153,19 @@
     }
   }
 
-  .govuk-header__service-name {
+  .#{$brand}-header__service-name {
     display: inline-block;
     margin-bottom: govuk-spacing(2);
     @include govuk-font-size($size: 24);
     @include govuk-typography-weight-bold;
   }
 
-  .govuk-header__logo,
-  .govuk-header__content {
+  .#{$brand}-header__logo,
+  .#{$brand}-header__content {
     box-sizing: border-box;
   }
 
-  .govuk-header__logo {
+  .#{$brand}-header__logo {
     @include govuk-responsive-margin($govuk-header-vertical-spacing-value, "bottom");
     // Protect the absolute positioned menu button from overlapping with the
     // logo with right padding using the button's width
@@ -186,7 +186,7 @@
     }
   }
 
-  .govuk-header__content {
+  .#{$brand}-header__content {
     @include govuk-media-query($from: desktop) {
       width: 66.66%;
       padding-left: $govuk-gutter-half;
@@ -194,7 +194,7 @@
     }
   }
 
-  .govuk-header__menu-button {
+  .#{$brand}-header__menu-button {
     @include govuk-font($size: 16);
     position: absolute;
     // calculate top offset by:
@@ -241,23 +241,23 @@
       top: govuk-spacing(3);
     }
 
-    .govuk-frontend-supported & {
+    .#{$brand}-frontend-supported & {
       display: block;
     }
 
     &[hidden],
-    .govuk-frontend-supported &[hidden] {
+    .#{$brand}-frontend-supported &[hidden] {
       display: none;
     }
   }
 
-  .govuk-header__navigation {
+  .#{$brand}-header__navigation {
     @include govuk-media-query($from: desktop) {
       margin-bottom: govuk-spacing(2);
     }
   }
 
-  .govuk-header__navigation-list {
+  .#{$brand}-header__navigation-list {
     // Reset user-agent default list styles
     margin: 0;
     padding: 0;
@@ -268,7 +268,7 @@
     }
   }
 
-  .govuk-header__navigation--end {
+  .#{$brand}-header__navigation--end {
     @include govuk-media-query($from: desktop) {
       margin: 0;
       padding: govuk-spacing(1) 0;
@@ -276,7 +276,7 @@
     }
   }
 
-  .govuk-header__navigation-item {
+  .#{$brand}-header__navigation-item {
     padding: govuk-spacing(2) 0;
     border-bottom: 1px solid $govuk-header-nav-item-border-color;
 
@@ -294,7 +294,7 @@
     }
   }
 
-  .govuk-header__navigation-item--active {
+  .#{$brand}-header__navigation-item--active {
     a {
       &:link,
       &:hover,
@@ -316,19 +316,19 @@
     }
   }
 
-  .govuk-header__navigation-item:last-child {
+  .#{$brand}-header__navigation-item:last-child {
     margin-right: 0;
     border-bottom: 0;
   }
 
   @include govuk-media-query($media-type: print) {
-    .govuk-header {
+    .#{$brand}-header {
       border-bottom-width: 0;
       color: govuk-colour("black");
       background: transparent;
     }
 
-    .govuk-header__link {
+    .#{$brand}-header__link {
       &:link,
       &:visited {
         color: govuk-colour("black");

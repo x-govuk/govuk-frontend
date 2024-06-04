@@ -1,5 +1,5 @@
 @include govuk-exports("govuk/component/panel") {
-  .govuk-panel {
+  .#{$brand}-panel {
     @include govuk-font($size: 36);
 
     box-sizing: border-box;
@@ -28,7 +28,7 @@
     }
   }
 
-  .govuk-panel--confirmation {
+  .#{$brand}-panel--confirmation {
     color: govuk-colour("white");
     background: govuk-colour("green");
 
@@ -39,14 +39,14 @@
     }
   }
 
-  .govuk-panel__title {
+  .#{$brand}-panel__title {
     @include govuk-font-size($size: 48);
     @include govuk-typography-weight-bold;
     margin-top: 0;
     margin-bottom: govuk-spacing(6);
   }
 
-  .govuk-panel__title:last-child {
+  .#{$brand}-panel__title:last-child {
     margin-bottom: 0;
   }
 }

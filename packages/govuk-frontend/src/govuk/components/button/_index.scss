@@ -59,7 +59,7 @@ $govuk-inverse-button-text-colour: $govuk-brand-colour !default;
   // increase the bottom margin to include it (s2).
   $button-shadow-size: $govuk-border-width-form-element;
 
-  .govuk-button {
+  .#{$brand}-button {
     @include govuk-font($size: 19, $line-height: 19px);
 
     box-sizing: border-box;
@@ -157,7 +157,7 @@ $govuk-inverse-button-text-colour: $govuk-brand-colour !default;
     }
   }
 
-  .govuk-button[disabled] {
+  .#{$brand}-button[disabled] {
     opacity: (0.5);
 
     &:hover {
@@ -171,7 +171,7 @@ $govuk-inverse-button-text-colour: $govuk-brand-colour !default;
     }
   }
 
-  .govuk-button--secondary {
+  .#{$brand}-button--secondary {
     background-color: $govuk-secondary-button-colour;
     box-shadow: 0 $button-shadow-size 0 $govuk-secondary-button-shadow-colour;
 
@@ -192,7 +192,7 @@ $govuk-inverse-button-text-colour: $govuk-brand-colour !default;
     }
   }
 
-  .govuk-button--warning {
+  .#{$brand}-button--warning {
     background-color: $govuk-warning-button-colour;
     box-shadow: 0 $button-shadow-size 0 $govuk-warning-button-shadow-colour;
 
@@ -213,7 +213,7 @@ $govuk-inverse-button-text-colour: $govuk-brand-colour !default;
     }
   }
 
-  .govuk-button--inverse {
+  .#{$brand}-button--inverse {
     background-color: $govuk-inverse-button-colour;
     box-shadow: 0 $button-shadow-size 0 $govuk-inverse-button-shadow-colour;
 
@@ -234,7 +234,7 @@ $govuk-inverse-button-text-colour: $govuk-brand-colour !default;
     }
   }
 
-  .govuk-button--start {
+  .#{$brand}-button--start {
     @include govuk-typography-weight-bold;
     @include govuk-font-size($size: 24, $line-height: 1);
 
@@ -244,7 +244,7 @@ $govuk-inverse-button-text-colour: $govuk-brand-colour !default;
     justify-content: center;
   }
 
-  .govuk-button__start-icon {
+  .#{$brand}-button__start-icon {
     margin-left: govuk-spacing(1);
 
     @include govuk-media-query($from: desktop) {

@@ -5,7 +5,7 @@
 @include govuk-exports("govuk/component/file-upload") {
   $component-padding: govuk-spacing(1);
 
-  .govuk-file-upload {
+  .#{$brand}-file-upload {
     @include govuk-font($size: 19);
     @include govuk-text-colour;
     max-width: 100%;

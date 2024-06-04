@@ -3,7 +3,7 @@
 @import "../label/index";
 
 @include govuk-exports("govuk/component/select") {
-  .govuk-select {
+  .#{$brand}-select {
     @include govuk-font($size: 19, $line-height: 1.25);
 
     box-sizing: border-box; // should this be global?
@@ -40,14 +40,14 @@
     }
   }
 
-  .govuk-select option:active,
-  .govuk-select option:checked,
-  .govuk-select:focus::-ms-value {
+  .#{$brand}-select option:active,
+  .#{$brand}-select option:checked,
+  .#{$brand}-select:focus::-ms-value {
     color: govuk-colour("white");
     background-color: govuk-colour("blue");
   }
 
-  .govuk-select--error {
+  .#{$brand}-select--error {
     border-color: $govuk-error-colour;
 
     &:focus {

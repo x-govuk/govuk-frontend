@@ -1,7 +1,7 @@
 @include govuk-exports("govuk/component/tag") {
   $govuk-tag-max-width: if(map-has-key($govuk-breakpoints, "mobile"), map-get($govuk-breakpoints, "mobile") / 2, 160px);
 
-  .govuk-tag {
+  .#{$brand}-tag {
     @include govuk-font($size: 19);
 
     display: inline-block;
@@ -40,52 +40,52 @@
     }
   }
 
-  .govuk-tag--grey {
+  .#{$brand}-tag--grey {
     color: govuk-shade(govuk-colour("dark-grey"), 50%);
     background-color: govuk-tint(govuk-colour("dark-grey"), 85%);
   }
 
-  .govuk-tag--purple {
+  .#{$brand}-tag--purple {
     color: govuk-shade(govuk-colour("bright-purple"), 50%);
     background-color: govuk-tint(govuk-colour("bright-purple"), 85%);
   }
 
-  .govuk-tag--turquoise {
+  .#{$brand}-tag--turquoise {
     color: govuk-shade(govuk-colour("turquoise"), 60%);
     background-color: govuk-tint(govuk-colour("turquoise"), 80%);
   }
 
-  .govuk-tag--blue {
+  .#{$brand}-tag--blue {
     color: govuk-shade(govuk-colour("blue"), 60%);
     background-color: govuk-tint(govuk-colour("blue"), 70%);
   }
 
-  .govuk-tag--light-blue {
+  .#{$brand}-tag--light-blue {
     color: govuk-shade(govuk-colour("blue"), 60%);
     background-color: govuk-tint(govuk-colour("blue"), 90%);
   }
 
-  .govuk-tag--yellow {
+  .#{$brand}-tag--yellow {
     color: govuk-shade(govuk-colour("yellow"), 65%);
     background-color: govuk-tint(govuk-colour("yellow"), 75%);
   }
 
-  .govuk-tag--orange {
+  .#{$brand}-tag--orange {
     color: govuk-shade(govuk-colour("orange"), 55%);
     background-color: govuk-tint(govuk-colour("orange"), 70%);
   }
 
-  .govuk-tag--red {
+  .#{$brand}-tag--red {
     color: govuk-shade(govuk-colour("red"), 80%);
     background-color: govuk-tint(govuk-colour("red"), 75%);
   }
 
-  .govuk-tag--pink {
+  .#{$brand}-tag--pink {
     color: govuk-shade(govuk-colour("pink"), 50%);
     background-color: govuk-tint(govuk-colour("pink"), 85%);
   }
 
-  .govuk-tag--green {
+  .#{$brand}-tag--green {
     color: govuk-shade(govuk-colour("green"), 20%);
     background-color: govuk-tint(govuk-colour("green"), 80%);
   }

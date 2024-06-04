@@ -1,5 +1,5 @@
 @include govuk-exports("govuk/component/inset-text") {
-  .govuk-inset-text {
+  .#{$brand}-inset-text {
     @include govuk-font($size: 19);
     @include govuk-text-colour;
     padding: govuk-spacing(3);

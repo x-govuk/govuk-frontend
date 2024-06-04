@@ -4,16 +4,16 @@
 @import "../textarea/index";
 
 @include govuk-exports("govuk/component/character-count") {
-  .govuk-character-count {
+  .#{$brand}-character-count {
     @include govuk-responsive-margin(6, "bottom");
 
-    .govuk-form-group,
-    .govuk-textarea {
+    .#{$brand}-form-group,
+    .#{$brand}-textarea {
       margin-bottom: govuk-spacing(1);
     }
   }
 
-  .govuk-character-count__message {
+  .#{$brand}-character-count__message {
     @include govuk-font-tabular-numbers;
     margin-top: 0;
     margin-bottom: 0;
@@ -28,7 +28,7 @@
     }
   }
 
-  .govuk-character-count__message--disabled {
+  .#{$brand}-character-count__message--disabled {
     visibility: hidden;
   }
 }

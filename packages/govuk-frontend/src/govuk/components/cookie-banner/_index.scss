@@ -2,7 +2,7 @@
   // This needs to be kept in sync with the header component's styles
   $border-bottom-width: govuk-spacing(2);
 
-  .govuk-cookie-banner {
+  .#{$brand}-cookie-banner {
     padding-top: govuk-spacing(4);
     // The component does not set bottom spacing.
     // The bottom spacing should be created by the items inside the component.
@@ -16,11 +16,11 @@
 
   // Support older browsers which don't hide elements with the `hidden` attribute
   // when user hides the whole cookie banner with a 'Hide' button.
-  .govuk-cookie-banner[hidden] {
+  .#{$brand}-cookie-banner[hidden] {
     display: none;
   }
 
-  .govuk-cookie-banner__message {
+  .#{$brand}-cookie-banner__message {
     // Remove the extra height added by the separator border.
     margin-bottom: -$border-bottom-width;
 

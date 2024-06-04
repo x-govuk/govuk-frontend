@@ -4,15 +4,15 @@
   $govuk-accordion-icon-focus-colour: $govuk-focus-colour;
   $govuk-accordion-bottom-border-width: 1px;
 
-  .govuk-accordion {
+  .#{$brand}-accordion {
     @include govuk-responsive-margin(6, "bottom");
   }
 
-  .govuk-accordion__section {
+  .#{$brand}-accordion__section {
     padding-top: govuk-spacing(3);
   }
 
-  .govuk-accordion__section-heading {
+  .#{$brand}-accordion__section-heading {
     // Override browser defaults to ensure consistent element height
     margin-top: 0;
     margin-bottom: 0;
@@ -21,7 +21,7 @@
     padding-bottom: govuk-spacing(3);
   }
 
-  .govuk-accordion__section-button {
+  .#{$brand}-accordion__section-button {
     @include govuk-font($size: 24, $weight: bold);
     @include govuk-text-colour;
 
@@ -31,24 +31,24 @@
   }
 
   // Remove the bottom margin from the last item inside the content
-  .govuk-accordion__section-content > :last-child {
+  .#{$brand}-accordion__section-content > :last-child {
     margin-bottom: 0;
   }
 
   // GOV.UK Frontend JavaScript enabled
-  .govuk-frontend-supported {
-    .govuk-accordion {
+  .#{$brand}-frontend-supported {
+    .#{$brand}-accordion {
       // Border at the bottom of the whole accordion
       border-bottom: $govuk-accordion-bottom-border-width solid $govuk-border-colour;
     }
 
-    .govuk-accordion__section {
+    .#{$brand}-accordion__section {
       padding-top: 0;
     }
 
     // Hide the body of collapsed sections by default for browsers that lack
     // support for `content-visibility` paired with [hidden=until-found]
-    .govuk-accordion__section-content {
+    .#{$brand}-accordion__section-content {
       display: none;
 
       @include govuk-responsive-padding(3, "top");
@@ -57,7 +57,7 @@
 
     // Hide the body of collapsed sections using `content-visibility` to enable
     // page search within [hidden=until-found] regions where browser supported
-    .govuk-accordion__section-content[hidden] {
+    .#{$brand}-accordion__section-content[hidden] {
       @supports (content-visibility: hidden) {
         content-visibility: hidden;
         display: inherit;
@@ -69,11 +69,11 @@
     }
 
     // Show the body of expanded sections
-    .govuk-accordion__section--expanded .govuk-accordion__section-content {
+    .#{$brand}-accordion__section--expanded .#{$brand}-accordion__section-content {
       display: block;
     }
 
-    .govuk-accordion__show-all {
+    .#{$brand}-accordion__show-all {
       @include govuk-font($size: 19);
       position: relative;
       z-index: 1;
@@ -109,16 +109,16 @@
           0 -2px $govuk-accordion-hover-colour,
           0 4px $govuk-accordion-hover-colour;
 
-        .govuk-accordion__section-toggle-text {
+        .#{$brand}-accordion__section-toggle-text {
           color: $govuk-accordion-base-colour;
         }
 
-        .govuk-accordion-nav__chevron {
+        .#{$brand}-accordion-nav__chevron {
           color: $govuk-accordion-base-colour;
           background: $govuk-accordion-base-colour;
         }
 
-        .govuk-accordion-nav__chevron::after {
+        .#{$brand}-accordion-nav__chevron::after {
           color: $govuk-accordion-hover-colour;
         }
       }
@@ -126,22 +126,22 @@
       &:focus {
         @include govuk-focused-text;
 
-        .govuk-accordion-nav__chevron {
+        .#{$brand}-accordion-nav__chevron {
           background: $govuk-accordion-base-colour;
         }
 
-        .govuk-accordion-nav__chevron::after {
+        .#{$brand}-accordion-nav__chevron::after {
           color: $govuk-accordion-icon-focus-colour;
         }
       }
     }
 
-    .govuk-accordion__section-heading {
+    .#{$brand}-accordion__section-heading {
       padding: 0;
     }
 
     // Create Chevron icon aligned with text
-    .govuk-accordion-nav__chevron {
+    .#{$brand}-accordion-nav__chevron {
       box-sizing: border-box;
       display: inline-block;
 
@@ -177,11 +177,11 @@
     }
 
     // Rotate icon to create "Down" version
-    .govuk-accordion-nav__chevron--down {
+    .#{$brand}-accordion-nav__chevron--down {
       transform: rotate(180deg);
     }
 
-    .govuk-accordion__section-button {
+    .#{$brand}-accordion__section-button {
       width: 100%;
 
       padding: govuk-spacing(2) 0 0;
@@ -215,16 +215,16 @@
         color: $govuk-accordion-base-colour;
         background: $govuk-accordion-hover-colour;
 
-        .govuk-accordion__section-toggle-text {
+        .#{$brand}-accordion__section-toggle-text {
           color: $govuk-accordion-base-colour;
         }
 
-        .govuk-accordion-nav__chevron {
+        .#{$brand}-accordion-nav__chevron {
           color: $govuk-accordion-base-colour;
           background: $govuk-accordion-base-colour;
         }
 
-        .govuk-accordion-nav__chevron::after {
+        .#{$brand}-accordion-nav__chevron::after {
           color: $govuk-accordion-hover-colour;
         }
       }
@@ -234,18 +234,18 @@
         // styling is being applied to inner text elements that receive focus
         outline: 0;
 
-        .govuk-accordion__section-heading-text-focus,
-        .govuk-accordion__section-summary-focus,
-        .govuk-accordion__section-toggle-focus {
+        .#{$brand}-accordion__section-heading-text-focus,
+        .#{$brand}-accordion__section-summary-focus,
+        .#{$brand}-accordion__section-toggle-focus {
           @include govuk-focused-text;
         }
 
-        .govuk-accordion-nav__chevron {
+        .#{$brand}-accordion-nav__chevron {
           color: $govuk-accordion-base-colour;
           background: $govuk-accordion-base-colour;
         }
 
-        .govuk-accordion-nav__chevron::after {
+        .#{$brand}-accordion-nav__chevron::after {
           color: $govuk-accordion-icon-focus-colour;
         }
       }
@@ -260,7 +260,7 @@
     // Remove the transparent border when the section is expanded to make it clear that the heading
     // relates to the content below. Adjust padding to maintain the height of the element.
     // See https://github.com/alphagov/govuk-frontend/pull/2257#issuecomment-951920798
-    .govuk-accordion__section--expanded .govuk-accordion__section-button {
+    .#{$brand}-accordion__section--expanded .#{$brand}-accordion__section-button {
       padding-bottom: govuk-spacing(3);
       border-bottom: 0;
 
@@ -271,7 +271,7 @@
 
     // As Chevron icon is vertically aligned it overlaps with the focus state bottom border
     // Styling adds some spacing
-    .govuk-accordion__section-button:focus .govuk-accordion__section-toggle-focus {
+    .#{$brand}-accordion__section-button:focus .#{$brand}-accordion__section-toggle-focus {
       padding-bottom: 3px;
 
       @include govuk-media-query($from: desktop) {
@@ -279,21 +279,21 @@
       }
     }
 
-    .govuk-accordion__section-toggle,
-    .govuk-accordion__section-heading-text,
-    .govuk-accordion__section-summary {
+    .#{$brand}-accordion__section-toggle,
+    .#{$brand}-accordion__section-heading-text,
+    .#{$brand}-accordion__section-summary {
       display: block;
       margin-bottom: 13px;
 
-      .govuk-accordion__section-heading-text-focus,
-      .govuk-accordion__section-summary-focus,
-      .govuk-accordion__section-toggle-focus {
+      .#{$brand}-accordion__section-heading-text-focus,
+      .#{$brand}-accordion__section-summary-focus,
+      .#{$brand}-accordion__section-toggle-focus {
         display: inline;
       }
     }
 
     // Add toggle link with Chevron icon on left.
-    .govuk-accordion__section-toggle {
+    .#{$brand}-accordion__section-toggle {
       @include govuk-font-size($size: 19);
       @include govuk-typography-weight-regular;
       color: $govuk-link-colour;
@@ -302,8 +302,8 @@
     // Add space between the icon and text.
     // Avoid applying spacing directly to the icon as the use of `transform` will change the
     // placement of any margins.
-    .govuk-accordion__show-all-text,
-    .govuk-accordion__section-toggle-text {
+    .#{$brand}-accordion__show-all-text,
+    .#{$brand}-accordion__section-toggle-text {
       margin-left: govuk-spacing(1);
       vertical-align: middle;
     }
@@ -328,19 +328,19 @@
     // Also override the background colour of the Show/Hide chevrons which set a background colour
     // on hover.
     @media screen and (forced-colors: active) {
-      .govuk-accordion__show-all:hover,
-      .govuk-accordion__section-button:hover {
-        .govuk-accordion-nav__chevron {
+      .#{$brand}-accordion__show-all:hover,
+      .#{$brand}-accordion__section-button:hover {
+        .#{$brand}-accordion-nav__chevron {
           background-color: transparent;
         }
       }
 
-      .govuk-accordion__show-all:focus,
-      .govuk-accordion__section-button:focus {
-        .govuk-accordion__section-heading-text-focus,
-        .govuk-accordion__section-summary-focus,
-        .govuk-accordion__section-toggle-focus,
-        .govuk-accordion-nav__chevron {
+      .#{$brand}-accordion__show-all:focus,
+      .#{$brand}-accordion__section-button:focus {
+        .#{$brand}-accordion__section-heading-text-focus,
+        .#{$brand}-accordion__section-summary-focus,
+        .#{$brand}-accordion__section-toggle-focus,
+        .#{$brand}-accordion-nav__chevron {
           background: transparent;
           background-color: transparent;
         }
@@ -350,12 +350,12 @@
     // For devices that can't hover such as touch devices,
     // remove hover state as it can be stuck in that state (iOS).
     @media (hover: none) {
-      .govuk-accordion__section-header:hover {
+      .#{$brand}-accordion__section-header:hover {
         border-top-color: $govuk-border-colour;
 
         box-shadow: inset 0 3px 0 0 $govuk-link-colour;
 
-        .govuk-accordion__section-button {
+        .#{$brand}-accordion__section-button {
           border-top-color: $govuk-border-colour;
         }
       }

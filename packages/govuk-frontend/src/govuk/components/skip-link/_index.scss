@@ -1,5 +1,5 @@
 @include govuk-exports("govuk/component/skip-link") {
-  .govuk-skip-link {
+  .#{$brand}-skip-link {
     @include govuk-visually-hidden-focusable;
     @include govuk-typography-common;
     @include govuk-link-decoration;
@@ -33,7 +33,7 @@
     }
   }
 
-  .govuk-skip-link-focused-element {
+  .#{$brand}-skip-link-focused-element {
     &:focus {
       // Remove the native visible focus indicator when the element is programmatically focused.
       //

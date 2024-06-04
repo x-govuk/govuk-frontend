@@ -1,23 +1,23 @@
 // stylelint-disable declaration-no-important
 @include govuk-exports("govuk/overrides/display") {
-  .govuk-\!-display-inline {
+  .#{$brand}-\!-display-inline {
     display: inline !important;
   }
 
-  .govuk-\!-display-inline-block {
+  .#{$brand}-\!-display-inline-block {
     display: inline-block !important;
   }
 
-  .govuk-\!-display-block {
+  .#{$brand}-\!-display-block {
     display: block !important;
   }
 
-  .govuk-\!-display-none {
+  .#{$brand}-\!-display-none {
     display: none !important;
   }
 
   @include govuk-media-query($media-type: print) {
-    .govuk-\!-display-none-print {
+    .#{$brand}-\!-display-none-print {
       display: none !important;
     }
   }

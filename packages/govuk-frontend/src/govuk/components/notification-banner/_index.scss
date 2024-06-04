@@ -1,5 +1,5 @@
 @include govuk-exports("govuk/component/notification-banner") {
-  .govuk-notification-banner {
+  .#{$brand}-notification-banner {
     @include govuk-font($size: 19);
     @include govuk-responsive-margin(8, "bottom");
 
@@ -12,7 +12,7 @@
     }
   }
 
-  .govuk-notification-banner__header {
+  .#{$brand}-notification-banner__header {
     padding: 2px govuk-spacing(3) govuk-spacing(1);
 
     // Ensures the notification header appears separate to the notification body text in high contrast mode
@@ -23,7 +23,7 @@
     }
   }
 
-  .govuk-notification-banner__title {
+  .#{$brand}-notification-banner__title {
     // Set the size again because this element is a heading and the user agent
     // font size overrides the inherited font size
     @include govuk-font-size($size: 19);
@@ -33,7 +33,7 @@
     color: govuk-colour("white");
   }
 
-  .govuk-notification-banner__content {
+  .#{$brand}-notification-banner__content {
     $padding-tablet: govuk-spacing(4);
     @include govuk-text-colour;
     padding: govuk-spacing(3);
@@ -64,7 +64,7 @@
     }
   }
 
-  .govuk-notification-banner__heading {
+  .#{$brand}-notification-banner__heading {
     @include govuk-font-size($size: 24);
     @include govuk-typography-weight-bold;
 
@@ -73,17 +73,17 @@
     padding: 0;
   }
 
-  .govuk-notification-banner__link {
+  .#{$brand}-notification-banner__link {
     @include govuk-link-common;
     @include govuk-link-style-no-visited-state;
   }
 
-  .govuk-notification-banner--success {
+  .#{$brand}-notification-banner--success {
     border-color: $govuk-success-colour;
 
     background-color: $govuk-success-colour;
 
-    .govuk-notification-banner__link {
+    .#{$brand}-notification-banner__link {
       @include govuk-link-style-success;
     }
   }

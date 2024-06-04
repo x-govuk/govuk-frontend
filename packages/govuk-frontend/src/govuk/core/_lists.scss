@@ -20,7 +20,7 @@
     margin-bottom: govuk-spacing(1);
   }
 
-  .govuk-list {
+  .#{$brand}-list {
     @extend %govuk-list;
   }
 
@@ -51,15 +51,15 @@
     }
   }
 
-  .govuk-list--bullet {
+  .#{$brand}-list--bullet {
     @extend %govuk-list--bullet;
   }
 
-  .govuk-list--number {
+  .#{$brand}-list--number {
     @extend %govuk-list--number;
   }
 
-  .govuk-list--spaced {
+  .#{$brand}-list--spaced {
     @extend %govuk-list--spaced;
   }
 }

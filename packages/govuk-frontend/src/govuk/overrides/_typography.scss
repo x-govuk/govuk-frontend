@@ -2,11 +2,11 @@
   // Font size and line height
 
   // Generate typography override classes for each responsive font map in the
-  // typography scale eg .govuk-\!-font-size-80
+  // typography scale eg .#{$brand}-\!-font-size-80
   //
   // govuk-!-font-size-14 is deprecated
   @each $size, $font-map in $govuk-typography-scale {
-    .govuk-\!-font-size-#{$size} {
+    .#{$brand}-\!-font-size-#{$size} {
       $font-map: map-get($govuk-typography-scale, $size);
 
       // Add underscore to deprecated typography scale keys
@@ -20,17 +20,17 @@
 
   // Weights
 
-  .govuk-\!-font-weight-regular {
+  .#{$brand}-\!-font-weight-regular {
     @include govuk-typography-weight-regular($important: true);
   }
 
-  .govuk-\!-font-weight-bold {
+  .#{$brand}-\!-font-weight-bold {
     @include govuk-typography-weight-bold($important: true);
   }
 
   // Tabular numbers
 
-  .govuk-\!-font-tabular-numbers {
+  .#{$brand}-\!-font-tabular-numbers {
     @include govuk-font-tabular-numbers($important: true);
   }
 }
