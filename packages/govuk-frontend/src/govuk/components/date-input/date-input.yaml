@@ -119,15 +119,15 @@ params:
     required: false
     description: Specify `value` attributes for the date parts without setting items. You can also use the `name` for the fields as keys, including any `namePrefix`.
     params:
-      day:
+      - name: day
         type: string
         required: false
         description: The `value` attribute for the day input.
-      month:
+      - name: month
         type: string
         required: false
         description: The `value` attribute for the month input.
-      year:
+      - name: year
         type: string
         required: false
         description: The `value` attribute for the year input.
