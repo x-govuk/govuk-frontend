@@ -21,11 +21,7 @@ notes: The links to change your answers are not functional.
 {% set pageTitle = example.title %}
 {% block pageTitle %}{{ pageTitle }} - GOV.UK{% endblock %}
 
-{% block govukHeader %}
-  {{ govukHeader({
-    serviceName: "Temporary events notice"
-  }) }}
-{% endblock %}
+{% set serviceName = "Temporary events notice" %}
 
 {% block containerStart %}
   {{ govukBackLink({

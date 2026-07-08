@@ -11,7 +11,6 @@ notes: Based on Companies House "Find an update company information" service
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-{% from "govuk/components/header/macro.njk" import govukHeader %}
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
@@ -42,16 +41,9 @@ notes: Based on Companies House "Find an update company information" service
   </li>
 {% endset %}
 
-{% block govukHeader %}
-  {{ govukHeader({
-    classes: "govuk-header--full-width-border",
-    serviceName: "Find and update company information",
-    serviceUrl: "#0"
-  }) }}
-{% endblock %}
-
 {% block govukServiceNavigation %}
   {{ govukServiceNavigation({
+    serviceName: "Find and update company information",
     navigation: [
       {
         href: '#1',

@@ -58,23 +58,7 @@
 {% block govukHeader %}
   <!-- block:header -->
   {{ govukHeader({
-    serviceName: "Nom du service",
-    containerClasses: containerClasses,
-    navigation: [
-      {
-        href: '#1',
-        text: 'Élément de navigation 1',
-        active: true
-      },
-      {
-        href: '#2',
-        text: 'Élément de navigation 2'
-      },
-      {
-        href: '#3',
-        text: 'Élément de navigation 3'
-      }
-    ]
+    containerClasses: containerClasses
   }) }}
   <!-- endblock:header -->
 {% endblock %}

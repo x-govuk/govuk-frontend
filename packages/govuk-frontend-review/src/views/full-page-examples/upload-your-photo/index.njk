@@ -23,11 +23,7 @@ scenario: |
 {% set pageTitle = example.title %}
 {% block pageTitle %}{{ "Error: " if errorSummary | length }}{{ pageTitle }} - GOV.UK{% endblock %}
 
-{% block govukHeader %}
-  {{ govukHeader({
-    serviceName: "Apply for a passport"
-  }) }}
-{% endblock %}
+{% set serviceName = "Apply for a passport" %}
 
 {% block headerEnd %}
   {{ govukPhaseBanner({

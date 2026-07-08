@@ -109,7 +109,6 @@
     <div class="govuk-grid-column-full-width">
       <h2 class="govuk-heading-l">Header and Exit this page</h2>
         {{ govukHeader({
-        navigationClasses: "govuk-header__navigation--end",
         productName: "Product Name"
         }) }}
         <div class="govuk-width-container">
@@ -130,7 +129,6 @@
     <div class="govuk-grid-column-full-width">
       <h2 class="govuk-heading-l">Header and Notification banner</h2>
         {{ govukHeader({
-        navigationClasses: "govuk-header__navigation--end",
         productName: "Product Name"
         }) }}
         <div class="govuk-width-container">
@@ -157,7 +155,6 @@
     <div class="govuk-grid-column-full-width">
       <h2 class="govuk-heading-l">Header and Panel</h2>
         {{ govukHeader({
-        navigationClasses: "govuk-header__navigation--end",
         productName: "Product Name"
         }) }}
         <div class="govuk-width-container">
@@ -180,7 +177,6 @@
     <div class="govuk-grid-column-full-width">
       <h2 class="govuk-heading-l">Header and Phase banner</h2>
         {{ govukHeader({
-        navigationClasses: "govuk-header__navigation--end",
         productName: "Product Name"
         }) }}
         <div class="govuk-phase-banner">
@@ -233,36 +229,14 @@
         }
       ]
     }) }}
-      {{ govukHeader({
-      serviceName: "Service Name",
-      serviceUrl: "/components/header",
-      navigation: [
-        {
-          href: "#1",
-          text: "Navigation item 1",
-          active: true
-        },
-        {
-          href: "#2",
-          text: "Navigation item 2"
-        },
-        {
-          href: "#3",
-          text: "Navigation item 3"
-        },
-        {
-          href: "#4",
-          text: "Navigation item 4"
-        }
-      ]
-    }) }}
+      {{ govukHeader() }}
 
-        {{ govukPhaseBanner({
-          tag: {
-            text: "Alpha"
-          },
-          html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
-        }) }}
+      {{ govukPhaseBanner({
+        tag: {
+          text: "Alpha"
+        },
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+      }) }}
 
         {{ govukBreadcrumbs({
           items: [
