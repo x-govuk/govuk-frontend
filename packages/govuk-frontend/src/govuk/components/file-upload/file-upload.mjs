@@ -1,6 +1,5 @@
 import { closestAttributeValue } from '../../common/closest-attribute-value.mjs'
 import { ConfigurableComponent } from '../../common/configuration.mjs'
-import { formatErrorMessage } from '../../common/index.mjs'
 import { ElementError } from '../../errors/index.mjs'
 import { I18n } from '../../i18n.mjs'
 
@@ -57,22 +56,13 @@ export class FileUpload extends ConfigurableComponent {
   constructor($root, config = {}) {
     super($root, config)
 
-    const $input = this.$root.querySelector('input')
+    const $input = this.$root.querySelector('input[type="file"]')
 
     if ($input === null) {
       throw new ElementError({
         component: FileUpload,
         identifier: 'File inputs (`<input type="file">`)'
       })
-    }
-
-    if ($input.type !== 'file') {
-      throw new ElementError(
-        formatErrorMessage(
-          FileUpload,
-          'File input (`<input type="file">`) attribute (`type`) is not `file`'
-        )
-      )
     }
 
     this.$input = /** @type {HTMLFileInputElement} */ ($input)
