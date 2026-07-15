@@ -12,10 +12,6 @@ notes: Based on https://www.gov.uk/government/news/strictly-vampires-and-sausage
 {% set pageTitle = example.title %}
 {% block pageTitle %}{{ pageTitle }} - GOV.UK{% endblock %}
 
-{% block govukHeader %}
-  {{ govukHeader({}) }}
-{% endblock %}
-
 {% block govukServiceNavigation %}
 {{ govukServiceNavigation({
   navigation: [

@@ -1,23 +1,24 @@
 {% extends "layouts/full-page-example.njk" %}
 
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
 {% set pageTitle = "Photo submitted" %}
 {% block pageTitle %}{{ pageTitle }} - GOV.UK{% endblock %}
 
-{% block govukHeader %}
-  {{ govukHeader({
+{% block govukServiceNavigation %}
+  {{ govukServiceNavigation({
     serviceName: "Apply for a passport",
     navigation: [
-        {
-            href: "/",
-            text: "Home"
-        },
-        {
-            href: "#upload-a-photo",
-            text: "Upload a photo",
-            active: true
-        }
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "#upload-a-photo",
+        text: "Upload a photo",
+        active: true
+      }
     ]
   }) }}
 {% endblock %}
