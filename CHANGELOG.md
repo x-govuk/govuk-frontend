@@ -18,6 +18,8 @@ You can use Interruption panels within [Interruption pages](https://design-syste
 
 See the [guidance on the Design System website](https://design-system.service.gov.uk/components/panel/#interruption-panel) for more information on how to use the Interruption panel in your service.
 
+We made this change in [pull request #6636: Add interruption panel](https://github.com/alphagov/govuk-frontend/pull/6636).
+
 #### You can now pass `day`, `month`, `year`, `error` and `values` options to the Date input component
 
 We've updated the Date input component to add the following Nunjucks options:
