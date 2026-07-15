@@ -146,7 +146,7 @@ This prevents whitespace around inline HTML elements from collapsing and prevent
 
 If you're not using our Nunjucks macros, or have fixed this bug in a different way, you may want to update your code to add a `<span>` element instead.
 
-This change is only needed for start buttons containing HTML content. Other Button component styles and start buttons containing plain text were unaffected by the issue.
+You only need to make this change for start buttons containing HTML content, as the issue did not affect other Button component styles or start buttons containing plain text.
 
 We made this change in [pull request #7188: Add Nunjucks logic to insert `<span>` element around HTML in start buttons](https://github.com/alphagov/govuk-frontend/pull/7188).
 
