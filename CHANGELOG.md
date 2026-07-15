@@ -6,6 +6,20 @@ For advice on how to use these release notes, see [our guidance on staying up to
 
 ### New features
 
+#### You can now use the Interruption panel to pause the user’s journey and give important information
+
+We’ve introduced an interruption variant of the [Panel component](https://design-system.service.gov.uk/components/panel).
+
+You can use Interruption panels within [Interruption pages](https://design-system.service.gov.uk/patterns/interruption-pages) to warn users before they:
+
+- do something unusual that’s probably a mistake
+- do something that cannot be undone (so you can ask the user “Are you sure?”)
+- give an answer that conflicts with existing information
+
+See the [guidance on the Design System website](https://design-system.service.gov.uk/components/panel/#interruption-panel) for more information on how to use the Interruption panel in your service.
+
+We made this change in [pull request #6636: Add interruption panel](https://github.com/alphagov/govuk-frontend/pull/6636).
+
 #### You can now pass `day`, `month`, `year`, `error` and `values` options to the Date input component
 
 We've updated the Date input component to add the following Nunjucks options:
