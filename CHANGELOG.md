@@ -128,7 +128,7 @@ We made this change in [pull request #6971: Add date input `day`, `month`, `year
 
 #### Use `inverse-text` instead of `govuk-colour("white")` for text on dark backgrounds that use functional colours
 
-We've introduced a new `inverse-text` functional colour for text on dark backgrounds that use [functional colours](https://design-system.service.gov.uk/styles/colour/#govuk-web-palette) such as `brand`, `success` and `error`.
+We've introduced a new `inverse-text` functional colour for text on dark backgrounds that use [functional colours](https://design-system.service.gov.uk/styles/colour/#functional-colours) such as `brand`, `success` and `error`.
 
 If you're using `govuk-colour("white")` as a text colour on dark backgrounds that use functional colours, replace `govuk-colour("white")` with `govuk-functional-colour(inverse-text)`.
 
