@@ -25,12 +25,12 @@ We made this change in [pull request #6636: Add interruption panel](https://gith
 We've updated the Date input component to add the following Nunjucks options:
 
 - `day`, `month` and `year` options to customise individual items
-- `error` boolean option to set the error state on individual items
-- `values` option to set individual item values using a single object
+- an `error` boolean option to set the error state on individual items
+- a `values` option to set individual item values using a single object
 
 For consistency with other components, the Date input component's error state is now set automatically when `errorMessage` is provided.
 
-For example, it is no longer necessary to set the `"govuk-input--error"` class on every item:
+For example, you no longer need to set the `"govuk-input--error"` class on every item:
 
 ```patch
   {{ govukDateInput({
@@ -128,7 +128,7 @@ We made this change in [pull request #6971: Add date input `day`, `month`, `year
 
 #### Use `inverse-text` instead of `govuk-colour("white")` for text on dark backgrounds that use functional colours
 
-We've introduced a new `inverse-text` functional colour to use on dark backgrounds that use functional colours such as `brand`, `success` and `error`.
+We've introduced a new `inverse-text` functional colour for text on dark backgrounds that use functional colours such as `brand`, `success` and `error`.
 
 If you're using `govuk-colour("white")` as a text colour on dark backgrounds that use functional colours, replace `govuk-colour("white")` with `govuk-functional-colour(inverse-text)`.
 
@@ -144,7 +144,7 @@ We've updated the Button component's Nunjucks macro to add a `<span>` element ar
 
 This prevents whitespace around inline HTML elements from collapsing and prevents button content from wrapping incorrectly on narrow screens.
 
-If you're not using our Nunjucks macros, or have fixed this bug in a different way, you may want to update your code to add a `<span>` element instead.
+If you're not using our Nunjucks macros, or have fixed this bug in a different way, you can update your code to add a `<span>` element instead.
 
 You only need to make this change for start buttons containing HTML content, as the issue did not affect other Button component styles or start buttons containing plain text.
 
