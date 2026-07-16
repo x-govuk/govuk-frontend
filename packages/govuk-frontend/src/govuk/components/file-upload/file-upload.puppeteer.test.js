@@ -682,7 +682,24 @@ describe('/components/file-upload', () => {
             })
           })
 
-          it('throws if the input type is not "file"', async () => {
+          it('does not throw when there are additional non-file inputs present', async () => {
+            await render(page, 'file-upload', examples.enhanced, {
+              beforeInitialisation() {
+                const fileInput = document.querySelector('[type="file"]')
+
+                fileInput.insertAdjacentHTML(
+                  'beforebegin',
+                  `<input type="hidden" name="${fileInput.getAttribute('name')}">`
+                )
+              }
+            })
+
+            const $buttonElement = await page.$(buttonSelector)
+
+            expect($buttonElement).not.toBeNull()
+          })
+
+          it('throws when only an input of type "file" is present', async () => {
             await expect(
               render(page, 'file-upload', examples.enhanced, {
                 beforeInitialisation() {
@@ -695,7 +712,7 @@ describe('/components/file-upload', () => {
               cause: {
                 name: 'ElementError',
                 message:
-                  'govuk-file-upload: File input (`<input type="file">`) attribute (`type`) is not `file`'
+                  'govuk-file-upload: File inputs (`<input type="file">`) not found'
               }
             })
           })

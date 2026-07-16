@@ -156,6 +156,7 @@ We've made fixes to GOV.UK Frontend in the following pull requests:
 
 - [#7183: Update exit this page overlay colour to use system colours](https://github.com/alphagov/govuk-frontend/pull/7183)
 - [#7197: Improve source spacing for header](https://github.com/alphagov/govuk-frontend/pull/7197)
+- [#7268: Stop file upload component from throwing errors when hidden inputs are present](https://github.com/alphagov/govuk-frontend/pull/7268)
 
 ## v6.3.0 (Feature release)
 
