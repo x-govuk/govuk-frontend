@@ -128,7 +128,7 @@ We made this change in [pull request #6971: Add date input `day`, `month`, `year
 
 #### Use `inverse-text` instead of `govuk-colour("white")` for text on dark backgrounds that use functional colours
 
-We've introduced a new `inverse-text` functional colour for text on dark backgrounds that use functional colours such as `brand`, `success` and `error`.
+We've introduced a new `inverse-text` functional colour for text on dark backgrounds that use [functional colours](https://design-system.service.gov.uk/styles/colour/#govuk-web-palette) such as `brand`, `success` and `error`.
 
 If you're using `govuk-colour("white")` as a text colour on dark backgrounds that use functional colours, replace `govuk-colour("white")` with `govuk-functional-colour(inverse-text)`.
 
@@ -142,11 +142,11 @@ We made this change in [pull request #7178: Add `inverse-text` functional colour
 
 We've updated the Button component's Nunjucks macro to add a `<span>` element around HTML content within start buttons.
 
-This prevents whitespace around inline HTML elements from collapsing and prevents button content from wrapping incorrectly on narrow screens.
+This fixes a bug that caused whitespace around inline HTML elements to collapse and button content to wrap incorrectly on narrow screens.
 
 If you're not using our Nunjucks macros, or have fixed this bug in a different way, you can update your code to add a `<span>` element instead.
 
-You only need to make this change for start buttons containing HTML content, as the issue did not affect other Button component styles or start buttons containing plain text.
+You only need to make this change for start buttons containing HTML content, as the bug did not affect other Button component styles or start buttons containing plain text.
 
 We made this change in [pull request #7188: Add Nunjucks logic to insert `<span>` element around HTML in start buttons](https://github.com/alphagov/govuk-frontend/pull/7188).
 
