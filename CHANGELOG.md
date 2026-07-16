@@ -22,7 +22,7 @@ You can use Interruption panels within [Interruption pages](https://design-syste
 
 See the [guidance on the Design System website](https://design-system.service.gov.uk/components/panel/#interruption-panel) for more information on how to use the Interruption panel in your service.
 
-We made this change in [pull request #6636: Add interruption panel](https://github.com/alphagov/govuk-frontend/pull/6636).
+We made this change in [pull request #6636: Add interruption panel](https://github.com/alphagov/govuk-frontend/pull/6636), thanks @frankieroberto and the NHS Design System team for contributing this change.
 
 #### You can now pass `day`, `month`, `year`, `error` and `values` options to the Date input component
 
@@ -126,7 +126,7 @@ You can now pass in `values: data` to automatically set item values:
   }) }}
 ```
 
-We made this change in [pull request #6971: Add date input `day`, `month`, `year` and `values` options](https://github.com/alphagov/govuk-frontend/pull/6971).
+We made this change in [pull request #6971: Add date input `day`, `month`, `year` and `values` options](https://github.com/alphagov/govuk-frontend/pull/6971), thanks @colinrotherham for contributing this change.
 
 ### Recommended changes
 
@@ -160,7 +160,7 @@ We've made fixes to GOV.UK Frontend in the following pull requests:
 
 - [#7183: Update exit this page overlay colour to use system colours](https://github.com/alphagov/govuk-frontend/pull/7183)
 - [#7197: Improve source spacing for header](https://github.com/alphagov/govuk-frontend/pull/7197)
-- [#7268: Stop file upload component from throwing errors when hidden inputs are present](https://github.com/alphagov/govuk-frontend/pull/7268)
+- [#7268: Stop file upload component from throwing errors when hidden inputs are present](https://github.com/alphagov/govuk-frontend/pull/7268), thanks @peteryates for reporting and fixing this issue.
 
 ## v6.3.0 (Feature release)
 
